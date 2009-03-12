@@ -361,6 +361,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\E4XType.h"
+				>
+			</File>
+			<File
 				RelativePath=".\LinCharSet.h"
 				>
 			</File>
