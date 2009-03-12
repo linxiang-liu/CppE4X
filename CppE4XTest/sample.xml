@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<exec hehe="&amp;a"> <!-- hehe -<sdfs></sdfd> -->
+  <![CDATA[ haha ]]>
+  <friction>4</friction>
+    <item>
+        <minipic>&#x11;data\TOUCHWIN\会展.JPG</minipic>
+        <detail>
+          <![CDATA[data\TOUCHWIN\会展.b<mp]]></detail>
+        <exepath>Exhibition.exe</exepath>
+        <title>打开应用程序3</title>
+      <!-- hehe -<sdfs></sdfd> -->
+      <![CDATA[ haha ]]>
+        <content>这是一个游戏</content>
+    </item>
+    <item>
+        <minipic>data\TOUCHWIN\移动.JPG</minipic>
+        <detail>data\TOUCHWIN\大移动.JPG</detail>
+        <exepath>Non-governmental.exe</exepath>
+        <title>打开应用程序3</title>
+        <content>这是一个游戏</content>
+    </item>
+    <item>
+        <minipic>data\TOUCHWIN\政府.JPG<!-- hehe -<sdfs></sdfd> -->
+      </minipic>
+        <detail>data\TOUCHWIN\大政府.JPG</detail>
+        <exepath>governmental.exe</exepath>
+        <title>打开应用程序3</title>
+        <content>这是一个游戏</content>
+    </item>
+    <item>
+        <minipic>data\TOUCHWIN\导航.JPG</minipic>
+        <detail>data\TOUCHWIN\大导航.JPG</detail>
+        <exepath>AppLoader.swf</exepath>
+        <title>打开应用程序1</title>
+        <content>这是一个游戏</content>
+    </item>
+    <item>
+        <minipic>data\TOUCHWIN\图片.jpg</minipic>
+        <detail>data\TOUCHWIN\大图片.jpg</detail>
+        <exepath>photo.swf</exepath>
+        <title>打开应用程序2</title>
+        <content>这是一个动画</content>
+    </item>
+    <item>
+        <minipic>data\TOUCHWIN\火.jpg</minipic>
+        <detail>data\TOUCHWIN\大火焰.jpg</detail>
+        <exepath>fire.swf</exepath>
+        <title>打开应用程序4</title>
+        <content>这是一个动画</content>
+    </item>
+    <item>
+        <minipic>data\TOUCHWIN\地图.jpg</minipic>
+        <detail>data\TOUCHWIN\大地图.jpg</detail>
+        <exepath>fscommand\google_earth_test1.exe</exepath>
+        <title>打开应用程序2</title>
+        <content>这是一个动画</content>
+    </item>
+    <item>
+        <minipic>data\TOUCHWIN\视频.jpg</minipic>
+        <detail>data\TOUCHWIN\大视频.jpg</detail>
+        <exepath>Media_app_v2.swf</exepath>
+        <title>打开应用程序3</title>
+        <content>这是一个游戏</content>
+    </item>
+    <item>
+        <minipic>data\TOUCHWIN\冲击波.jpg</minipic>
+        <detail>data\TOUCHWIN\大冲击波.jpg</detail>
+        <exepath>fscommand\smoke\smoke.exe</exepath>
+        <title>打开应用程序3</title>
+        <content>这是一个游戏</content>
+    </item>
+    <item>
+        <minipic>data\TOUCHWIN\multikey.JPG</minipic>
+        <detail>data\TOUCHWIN\MultiKey_screenshot.jpg</detail>
+        <exepath>MultiKey.swf</exepath>
+        <title>打开应用程序3</title>
+        <content>这是一个游戏</content>
+    </item>
+    <item>
+        <minipic>data\TOUCHWIN\拼图.jpg</minipic>
+        <detail>data\TOUCHWIN\大拼图.jpg</detail>
+        <exepath>Puzzle.swf</exepath>
+        <title>打开应用程序3</title>
+        <content>这是一个游戏</content>
+    </item>
+</exec>
