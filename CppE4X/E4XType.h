@@ -1,3 +1,5 @@
+#pragma once
+
 namespace E4X
 {
 	enum E4X_TYPE
