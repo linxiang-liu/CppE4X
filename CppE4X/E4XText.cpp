@@ -45,7 +45,7 @@ namespace E4X
 			pNewPos++;
 		}
 
-		if( *pNewPos == 0) return 0;
+		//if( *pNewPos == 0) return 0;
 
 		m_strValue.reserve( pNewPos - xmldata);
 		std::copy( xmldata, pNewPos, std::back_inserter(m_strValue));

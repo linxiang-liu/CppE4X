@@ -26,10 +26,15 @@ namespace E4X
 		std::string toXmlString();
 
 		// ¸³Öµ
-		E4XIterator& operator = ( const std::string& strName);
-		E4XIterator& operator = ( const char* strName);
-		E4XIterator& operator = ( bool bFlag);
-		E4XIterator& operator = ( int nNumber);
+		template<typename T> E4XIterator& operator = ( T t)
+		{
+			getCell() = t;
+			return *this;
+		}
+		//E4XIterator& operator = ( const std::string& strName);
+		//E4XIterator& operator = ( const char* strName);
+		//E4XIterator& operator = ( bool bFlag);
+		//E4XIterator& operator = ( int nNumber);
 
 		E4XCell& getCell();
 

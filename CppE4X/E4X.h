@@ -5,6 +5,7 @@
 // stl
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <fstream>
 #include <list>
 #include <algorithm>

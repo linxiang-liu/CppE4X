@@ -2,7 +2,6 @@
 
 namespace E4X
 {
-
 	class E4XCell
 	{
 	protected:
@@ -25,9 +24,23 @@ namespace E4X
 		// 运算符重载
 		E4XIterator operator/(const std::string& strChildName);
 		E4XIterator operator[](const std::string& strChildName);
-		E4XCell& operator = ( const std::string& strName);
+		template<typename T> E4XCell& operator = ( T& t)
+		{
+			std::stringstream stream;
+			stream << t;
+			stream >> m_strValue;
+			if( GetType() == E4X_ELEMENT)
+			{
+				E4XText* t= new E4XText( m_strValue);
+				appendChild( t);
+			}
+			return *this;
+		};
+
+		E4XCell& operator = ( const char* strName);
+		E4XCell& operator = ( char* strName);
 		E4XCell& operator = ( bool bFlag);
-		E4XCell& operator = ( int nNumber);
+
 
 		// 类型转换
 		operator E4XIterator();

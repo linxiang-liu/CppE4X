@@ -53,6 +53,8 @@ int main(int /*argc*/, char* /*argv*/[])
 		
 		itnew/"heihei"/"hoho"/"heihei" = "heihei!!";
 
+		std::cout << (itnew/"heihei"/"hoho"/"heihei").toXmlString() << std::endl;
+
 		E4XIterator itremove( doc["exec"]["item"]);
 
 		while( itremove.hasNext())
@@ -77,9 +79,15 @@ int main(int /*argc*/, char* /*argv*/[])
 	
 	E4XElement e("<element data=\"element_data\" ><abc  value=\"letterÖÐÓ¢ÎÄ»ìºÏ\"  /></element>");
 
+	E4XElement in("<invoke name=\"PlayMovie\" returntype=\"xml\"><arguments /></invoke>");
+
 	std::cout << element.toXmlString() << std::endl;
 
 	std::cout << e.toXmlString() << std::endl;
+
+	std::cout << in["arguments"].toXmlString() << std::endl;
+	std::cout << in["@name"].toXmlString() << std::endl;
+	std::cout << in.toXmlString() << std::endl;
 
 	return 0;
 }

@@ -203,29 +203,35 @@ namespace E4X
 		return *m_pSubCell;
 	}
 
-	E4XIterator& E4XIterator::operator = ( const std::string& strName)
-	{
-		getCell() = strName;
-		return *this;
-	}
+	//template<typename T> E4XIterator& E4XIterator::operator = ( T& t)
+	//{
+	//	getCell() = t;
+	//	return *this;
+	//}
 
-	E4XIterator& E4XIterator::operator = ( const char* strName)
-	{
-		getCell() = std::string(strName);
-		return *this;
-	}
+	//E4XIterator& E4XIterator::operator = ( const std::string& strName)
+	//{
+	//	getCell() = strName;
+	//	return *this;
+	//}
 
-	E4XIterator& E4XIterator::operator = ( bool bFlag)
-	{
-		getCell() = bFlag;
-		return *this;
-	}
+	//E4XIterator& E4XIterator::operator = ( const char* strName)
+	//{
+	//	getCell() = std::string(strName);
+	//	return *this;
+	//}
 
-	E4XIterator& E4XIterator::operator = ( int nNumber)
-	{
-		getCell() = nNumber;
-		return *this;
-	}
+	//E4XIterator& E4XIterator::operator = ( bool bFlag)
+	//{
+	//	getCell() = bFlag;
+	//	return *this;
+	//}
+
+	//E4XIterator& E4XIterator::operator = ( int nNumber)
+	//{
+	//	getCell() = nNumber;
+	//	return *this;
+	//}
 
 	std::string E4XIterator::toXmlString()
 	{
