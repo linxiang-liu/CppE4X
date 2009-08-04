@@ -19,6 +19,7 @@ namespace E4X
 		int count();
 
 		E4XIterator operator/( const std::string& strName);
+		E4XCell& operator/( int index);
 		E4XIterator operator[]( const std::string& strName);
 		E4XCell& operator[](int nIndex);
 		operator E4XCell&();

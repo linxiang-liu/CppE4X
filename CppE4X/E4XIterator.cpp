@@ -76,8 +76,13 @@ namespace E4X
 			{
 				while( it != m_pCell->m_lstCell.end())
 				{
+					// 注意，并没有验证声明在文件中的位置，是否正确。( Declaration应该位于XML最前端)
+					if( (*it)->GetType() == E4X_DECLARATION && (*it)->m_strName == m_strName)
+						break;
+
 					if((*it)->GetType()==E4X_ELEMENT && (*it)->m_strName == m_strName)
 						break;
+					
 					it++;
 				}
 			}
@@ -102,6 +107,12 @@ namespace E4X
 	E4XIterator E4XIterator::operator/( const std::string& strName)
 	{
 		return (*this)[strName];
+	}
+
+
+	E4XCell& E4XIterator::operator/( int index)
+	{
+		return operator[](index);
 	}
 
 

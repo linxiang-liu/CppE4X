@@ -22,26 +22,26 @@ namespace E4X
 		switch( m_ec)
 		{
 		case ERROR_INVALID_TYPE:
-			pchError = "Invalid Child Type";
+			pchError = "invalid child type";
 			break;
 		case ERROR_UNSUPPORTED_EVALUATE:
-			pchError = "Unsupported yet :(, use new E4XCell(cell) instead";
+			pchError = "unsupported yet :(, use new E4XCell(cell) instead";
 			break;
 		case ERROR_OUT_BOUND:
-			pchError = "Out of bound";
+			pchError = "out of bound";
 			break;
 		case ERROR_HAS_NO_CHILD:
-			pchError = "Has no child items";
+			pchError = "no child items";
 			break;
 		case ERROR_UNSUPPORTED_OPERATOR:
-			pchError = "Unsupported operator :(";
+			pchError = "unsupported operator :(";
 			break;
 		case ERROR_INVALID_TEXT:
-			pchError = "Invalid Text";
+			pchError = "invalid text";
 			break;
 		case ERROR_UNKNOWN:
 		default:
-			pchError = "Unknown error";
+			pchError = "unknown error";
 		}
 
 		return pchError;

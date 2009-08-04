@@ -18,13 +18,15 @@ namespace E4X
 		virtual const std::string& getValue();
 		virtual void setName(const std::string& name);
 		virtual void setValue(const std::string& value);
-		virtual E4XCell& copy() = 0;
-		virtual void destroy();
+		virtual E4XCell& copy() = 0;			// clone 函数
+		virtual void destroy();					// 销毁由copy产生的对象。
 
 		// 运算符重载
 		E4XIterator operator/(const std::string& strChildName);
 		E4XIterator operator[](const std::string& strChildName);
-		template<typename T> E4XCell& operator = ( T& t)
+		
+		template<typename T>
+		E4XCell& operator = ( T& t)
 		{
 			std::stringstream stream;
 			stream << t;

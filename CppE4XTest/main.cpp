@@ -21,8 +21,7 @@ int main(int /*argc*/, char* /*argv*/[])
 	E4XDocument doc;
 	if( doc.loadFile( "sample.xml"))
 	{
-
-		//std::cout<< doc["#xml"]["@encoding"][0].ToString()<< std::endl;
+		std::cout<< doc["#xml"]["@encoding"].getCell().ToString()<< std::endl;
 		E4XDocument& pDoc = doc.copy();
 		E4XCell& pCellExec = pDoc["exec"].getCell().copy();
 
@@ -30,8 +29,7 @@ int main(int /*argc*/, char* /*argv*/[])
 
 		doc["exec"][0]["@attrib"]="hehe";
 		
-		// TODO  /优先级低于[],如何处理？
-		(doc/"exec")[0]/"@hello" = "exec_value";
+		pCellExec/"item"/1/"@hello" = "exec_value";
 
 		E4XIterator it = doc["exec"]["item"]["minipic"];
 		std::cout<< it[0].ToString() << std::endl;
