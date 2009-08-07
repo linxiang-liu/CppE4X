@@ -1,7 +1,10 @@
 #pragma once
 
+
 namespace E4X
 {
+	class E4XText;
+
 	class E4XCell
 	{
 	protected:
@@ -39,8 +42,8 @@ namespace E4X
 			return *this;
 		};
 
-		E4XCell& operator = ( const char* strName);
-		E4XCell& operator = ( char* strName);
+		//E4XCell& operator = ( const char* strName);
+		//E4XCell& operator = ( char* strName);
 		E4XCell& operator = ( bool bFlag);
 
 
