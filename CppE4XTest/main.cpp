@@ -22,8 +22,8 @@ int main(int /*argc*/, char* /*argv*/[])
 	if( doc.loadFile( "sample.xml"))
 	{
 		std::cout<< doc["#xml"]["@encoding"].getCell().ToString()<< std::endl;
-		E4XDocument& pDoc = doc.copy();
-		E4XCell& pCellExec = pDoc["exec"].getCell().copy();
+		E4XDocumentRef pDoc = doc.copy();
+		E4XCellRef pCellExec = pDoc["exec"].getCell().copy();
 
 		doc["exec"][0]["@hehe"] = std::string("hexhe");
 

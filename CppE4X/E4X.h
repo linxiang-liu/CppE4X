@@ -26,3 +26,16 @@
 #include "E4XDocument.h"
 #include "E4XText.h"
 #include "E4XIterator.h"
+
+
+namespace E4X
+{
+	typedef E4XException& E4XExceptionRef;
+	typedef E4XCell&	E4XCellRef;
+	typedef E4XAttribute&	E4XAttributeRef;
+	typedef E4XComment&	E4XCommentRef;
+	typedef E4XDeclaration&	E4XDeclarationRef;
+	typedef E4XElement&	E4XElementRef;
+	typedef E4XDocument& E4XDocumentRef;
+	typedef E4XText&	E4XTextRef;
+};
