@@ -19,7 +19,7 @@ namespace E4X
 	protected:
 		std::string& toXmlStringInternal( std::string& strXml, int nIndent = 0);
 
-	private:
+	public:
 		const char* parse( const char* xmldata);
 	};
 
