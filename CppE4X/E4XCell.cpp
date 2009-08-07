@@ -205,12 +205,14 @@ namespace E4X
 
 	//E4XCell& E4XCell::operator = ( const char* strName)
 	//{
-	//	return operator = (std::string(strName));
+	//	std::string str( strName);
+	//	return operator = ( const_cast<std::string&>(str));
 	//}
 
 	//E4XCell& E4XCell::operator = ( char* strName)
 	//{
-	//	return operator = (std::string( strName));
+	//	std::string str( strName);
+	//	return operator = ( const_cast<std::string&>(str));
 	//}
 
 	E4XCell& E4XCell::operator = ( bool bFlag)
