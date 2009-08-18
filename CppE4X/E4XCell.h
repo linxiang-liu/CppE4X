@@ -4,6 +4,7 @@
 namespace E4X
 {
 	class E4XText;
+	class E4XIterator;
 
 	class E4XCell
 	{
@@ -24,6 +25,11 @@ namespace E4X
 		virtual E4XCell& copy() = 0;			// clone 函数
 		virtual void destroy();					// 销毁由copy产生的对象。
 
+		int GetType();
+		E4XCell& GetParent();
+		void appendChild( E4XCell* pCell);
+		void prependChild( E4XCell* pCell);
+
 		// 运算符重载
 		E4XIterator operator/(const std::string& strChildName);
 		E4XIterator operator[](const std::string& strChildName);
@@ -36,8 +42,8 @@ namespace E4X
 			stream >> m_strValue;
 			if( GetType() == E4X_ELEMENT)
 			{
-				E4XText* t= new E4XText( m_strValue);
-				appendChild( t);
+				E4XCell* cell= new E4XText( m_strValue);
+				this->appendChild( cell);
 			}
 			return *this;
 		};
@@ -53,11 +59,6 @@ namespace E4X
 		bool ToBoolean();
 		double ToFloat();
 		std::string ToString();
-
-		int GetType();
-		E4XCell& GetParent();
-		void appendChild( E4XCell* pCell);
-		void prependChild( E4XCell* pCell);
 
 		void insertChildAfter( E4XCell* exist, E4XCell* insert);
 		void insertChildBefore( E4XCell* exist, E4XCell* insert);
