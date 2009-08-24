@@ -43,8 +43,8 @@ namespace E4X
 			{
 				//pNewPos = skipWhiteSpace( pNewPos + 1);
 				//if( pNewPos == 0) return 0;
-				if( *pNewPos == '>')
-					return pNewPos + 1;
+				if( *(pNewPos+1) == '>')
+					return pNewPos + 2;
 				else
 					return 0;
 			}
