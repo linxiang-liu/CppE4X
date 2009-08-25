@@ -48,8 +48,11 @@ namespace E4X
 			return *this;
 		};
 
-		//E4XCell& operator = ( const char* strName);
-		//E4XCell& operator = ( char* strName);
+		E4XCell& operator = ( const char* strName);
+		E4XCell& operator = ( char* strName);
+		E4XCell& operator = ( const std::string& value);
+		E4XCell& operator = ( std::string& value);
+
 		E4XCell& operator = ( bool bFlag);
 
 

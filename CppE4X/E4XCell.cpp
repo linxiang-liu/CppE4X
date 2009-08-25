@@ -222,6 +222,32 @@ namespace E4X
 		return *this;
 	}
 
+	E4XCell& E4XCell::operator = ( const char* strName)
+	{
+		return operator=( (const std::string&)( strName));
+	}
+
+	E4XCell& E4XCell::operator = ( char* strName)
+	{
+		return operator=( (const std::string&)( strName));
+	}
+
+	E4XCell& E4XCell::operator = ( const std::string& value)
+	{
+		m_strValue = value;
+		if( GetType() == E4X_ELEMENT)
+		{
+			E4XCell* cell= new E4XText( m_strValue);
+			this->appendChild( cell);
+		}
+		return *this;
+	}
+
+	E4XCell& E4XCell::operator = ( std::string& value)
+	{
+		return operator=( (const std::string&)( value));
+	}
+
 	E4XIterator E4XCell::operator/(const std::string& strChildName)
 	{
 		return E4XIterator( *this, strChildName);
