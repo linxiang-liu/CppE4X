@@ -144,6 +144,12 @@ namespace E4X
 			nCurrentIndex++;
 		}
 
+		if( nCurrentIndex == nIndex)
+		{
+			generalASubCell();
+			return operator[](nIndex);
+		}
+
 		throw( E4XException(E4XException::ERROR_OUT_BOUND));
 	}
 
