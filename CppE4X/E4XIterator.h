@@ -9,7 +9,7 @@ namespace E4X
 	{
 	public:
 		E4XIterator(const E4XIterator&);
-		E4XIterator(E4XCell& cell, const std::string& strName);
+		E4XIterator(E4XCell& cell, const std::string& strName=std::string());
 		~E4XIterator(void);
 
 		bool hasNext();
@@ -17,14 +17,19 @@ namespace E4X
 		void remove();
 
 		int count();
+		E4XCell& getCell();
 
 		E4XIterator operator/( const std::string& strName);
 		E4XCell& operator/( int index);
 		E4XIterator operator[]( const std::string& strName);
 		E4XCell& operator[](int nIndex);
-		operator E4XCell&();
+		//operator E4XCell&();
 
 		std::string toXmlString();
+
+		// 插入
+
+		// 删除
 
 		// 赋值
 		template<typename T> E4XIterator& operator = ( T t)
@@ -32,12 +37,16 @@ namespace E4X
 			getCell() = t;
 			return *this;
 		}
-		//E4XIterator& operator = ( const std::string& strName);
-		//E4XIterator& operator = ( const char* strName);
-		//E4XIterator& operator = ( bool bFlag);
-		//E4XIterator& operator = ( int nNumber);
 
-		E4XCell& getCell();
+		// 实现E4XCell的一部分方法
+		int toNumber();
+		bool toBoolean();
+		double toFloat();
+		std::string toString();
+
+		std::string getName();
+		std::string getValue();
+
 
 	private:
 		E4XIterator();

@@ -187,16 +187,16 @@ namespace E4X
 		return generalASubCell();
 	}
 
-	E4XIterator::operator E4XCell&()
-	{
-		E4XIterator it( *this);
-		if( it.hasNext())
-		{
-			return it.next();
-		}
+	//E4XIterator::operator E4XCell&()
+	//{
+	//	E4XIterator it( *this);
+	//	if( it.hasNext())
+	//	{
+	//		return it.next();
+	//	}
 
-		return generalASubCell();
-	}
+	//	return generalASubCell();
+	//}
 
 	E4XCell& E4XIterator::generalASubCell()
 	{
@@ -264,6 +264,35 @@ namespace E4X
 		return strXml;
 	}
 
+	int E4XIterator::toNumber()
+	{
+		return getCell().toNumber();
+	}
+
+	bool E4XIterator::toBoolean()
+	{
+		return getCell().toBoolean();
+	}
+
+	double E4XIterator::toFloat()
+	{
+		return getCell().toFloat();
+	}
+
+	std::string E4XIterator::toString()
+	{
+		return getCell().toString();
+	}
+
+	std::string E4XIterator::getName()
+	{
+		return getCell().getName();
+	}
+
+	std::string E4XIterator::getValue()
+	{
+		return getCell().getValue();
+	}
 }  // namespace
 
 

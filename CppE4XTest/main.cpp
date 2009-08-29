@@ -8,7 +8,7 @@ void test_read_write_file()
 	E4XDocument doc;
 	if( doc.loadFile("sample.xml"))
 	{
-		std::cout<< doc["#xml"]["@encoding"].getCell().toString()<< std::endl;
+		std::cout<< doc["#xml"]["@encoding"].toString()<< std::endl;
 		E4XDocumentRef pDoc = doc.copy();
 		E4XCellRef pCellExec = pDoc["exec"].getCell().copy();
 
@@ -41,6 +41,7 @@ void test_read_write_file()
 		std::cout << (itnew/"heihei"/"hoho"/"heihei").toXmlString() << std::endl;
 
 		E4XIterator itremove( doc["exec"]["item"]);
+		std::cout << itremove.toXmlString() << std::endl;
 
 		while( itremove.hasNext())
 		{
@@ -63,6 +64,9 @@ void test_create_new_file()
 {
 	E4XDocument doc;
 	doc["root"]["item"]["@type"]="attribute";
+	doc["root"]["item"][1]["@type"]="attribute_1";
+	E4XIterator it( doc);
+	std::cout << it.toXmlString() << std::endl;
 }
 
 void test_parse()

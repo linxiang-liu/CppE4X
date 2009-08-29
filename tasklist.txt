@@ -1,0 +1,16 @@
+1. 减少引用的使用(多使用iterator)
+2. 减少错误的产生。
+3. 尽量减少异常的出现。
+4. 能在编译器，或者一运行就提示错误
+5. 尽量让编译错误容易理解
+
+Count
+ElementCount
+
+所有的Iterator等等返回的应该都是Element,仅仅当名字带有@的时候返回attribute
+
+windows平台下，使用字符集转换
+
+64位兼容性
+
+应当使用iterator来parse语句

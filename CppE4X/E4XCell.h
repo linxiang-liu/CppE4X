@@ -59,7 +59,7 @@ namespace E4X
 
 
 		// ÀàÐÍ×ª»»
-		operator E4XIterator();
+		//operator E4XIterator();
 		int toNumber();
 		bool toBoolean();
 		double toFloat();
