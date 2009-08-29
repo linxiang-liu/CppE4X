@@ -148,7 +148,7 @@ namespace E4X
 
 	std::string& E4XElement::toXmlStringInternal( std::string& strXml, int nIndent)
 	{
-		strXml +=("<" + m_strName);
+		strXml += ("<" + m_strName);
 		int nSubIndent = (nIndent == -1? nIndent : (nIndent + 1) );
 
 		std::list< E4XCell*>::iterator it;
@@ -217,7 +217,7 @@ namespace E4X
 	}
 
 
-	const std::string& E4XElement::getValue()
+	std::string E4XElement::getValue()
 	{
 		E4XIterator it(*this, std::string());
 

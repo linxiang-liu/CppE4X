@@ -333,6 +333,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\E4XCharSet.h"
+				>
+			</File>
+			<File
 				RelativePath=".\E4XComment.h"
 				>
 			</File>
@@ -362,10 +366,6 @@
 			</File>
 			<File
 				RelativePath=".\E4XType.h"
-				>
-			</File>
-			<File
-				RelativePath=".\LinCharSet.h"
 				>
 			</File>
 		</Filter>

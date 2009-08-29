@@ -3,36 +3,23 @@
 
 using namespace E4X;
 
-int main(int /*argc*/, char* /*argv*/[])
+void test_read_write_file()
 {
-
-#ifdef WIN32
-#define _CRTDBG_MAP_ALLOC
-	int __tmpFlag = _CrtSetDbgFlag( _CRTDBG_REPORT_FLAG | _CRTDBG_LEAK_CHECK_DF);
-
-	__tmpFlag |= _CRTDBG_LEAK_CHECK_DF;
-
-	_CrtSetDbgFlag( __tmpFlag );
-
-	//_CrtSetBreakAlloc(647); 
-
-#endif
-
 	E4XDocument doc;
-	if( doc.loadFile( "sample.xml"))
+	if( doc.loadFile("sample.xml"))
 	{
-		std::cout<< doc["#xml"]["@encoding"].getCell().ToString()<< std::endl;
+		std::cout<< doc["#xml"]["@encoding"].getCell().toString()<< std::endl;
 		E4XDocumentRef pDoc = doc.copy();
 		E4XCellRef pCellExec = pDoc["exec"].getCell().copy();
 
-		doc["exec"][0]["@hehe"] = std::string("hexhe");
+		doc["exec"]["@hehe"] = std::string("hexhe");
 
-		doc["exec"][0]["@attrib"]="hehe";
+		doc["exec"]["@attrib"]="hehe";
 		
 		pCellExec/"item"/1/"@hello" = "exec_value";
 
 		E4XIterator it = doc["exec"]["item"]["minipic"];
-		std::cout<< it[0].ToString() << std::endl;
+		std::cout<< it[0].toString() << std::endl;
 
 		try
 		{
@@ -63,29 +50,57 @@ int main(int /*argc*/, char* /*argv*/[])
 
 		itremove.getCell().appendChild( &pCellExec);
 
-		//doc["exec"]["heihei"]["hoho"]["@haha"].remove();
-
 		doc.saveFile( "output.xml");
 
 		std::cout << doc.toXmlString() << std::endl;
 
 		pDoc.destroy();
 	}
+}
 
+
+void test_create_new_file()
+{
+	E4XDocument doc;
+	doc["root"]["item"]["@type"]="attribute";
+}
+
+void test_parse()
+{
 	E4XElement element;
-	element.parse("<hehe xx=\"heihei\'ha²âÊÔÖÐÎÄ×Ö·û´®h&amp;a\'hoho\"   ></hehe>");
+	element.parseAnsi("<hehe xx=\"heihei\'ha²âÊÔÖÐÎÄ×Ö·û´®h&amp;a\'hoho\"   ></hehe>");
 	
 	E4XElement e("<element data=\"element_data\" ><abc  value=\"letterÖÐÓ¢ÎÄ»ìºÏ\"  /></element>");
 
 	E4XElement in("<invoke name=\"PlayMovie\" returntype=\"xml\"><arguments /></invoke>");
 
-	std::cout << element.toXmlString() << std::endl;
+	std::cout << element.toAnsiXmlString() << std::endl;
 
 	std::cout << e.toXmlString() << std::endl;
 
 	std::cout << in["arguments"].toXmlString() << std::endl;
 	std::cout << in["@name"].toXmlString() << std::endl;
 	std::cout << in.toXmlString() << std::endl;
+}
+
+
+int main(int /*argc*/, char* /*argv*/[])
+{
+
+#ifdef WIN32
+#define _CRTDBG_MAP_ALLOC
+	int __tmpFlag = _CrtSetDbgFlag( _CRTDBG_REPORT_FLAG | _CRTDBG_LEAK_CHECK_DF);
+
+	__tmpFlag |= _CRTDBG_LEAK_CHECK_DF;
+
+	_CrtSetDbgFlag( __tmpFlag );
+
+	//_CrtSetBreakAlloc(647); 
+
+#endif
+	test_parse();
+	test_create_new_file();
+	test_read_write_file();
 
 	return 0;
 }

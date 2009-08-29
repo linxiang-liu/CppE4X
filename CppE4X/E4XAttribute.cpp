@@ -54,7 +54,6 @@ namespace E4X
 	std::string& E4XAttribute::toXmlStringInternal( std::string& strXml, int /*nIndent*/)
 	{
 		strXml +=( " " + m_strName + "=" + m_chSeparator +  getXmlString(m_strValue.c_str()) + m_chSeparator);
-
 		return strXml;
 	}
 

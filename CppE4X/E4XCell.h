@@ -16,10 +16,12 @@ namespace E4X
 
 		// virtual
 		virtual const char* parse( const char* xmldata) = 0;
+		const char* parseAnsi(const char* xmldata);
 		virtual std::string& toXmlStringInternal( std::string& strXml, int nIndent) = 0;
 		std::string toXmlString();
-		virtual const std::string& getName();
-		virtual const std::string& getValue();
+		std::string toAnsiXmlString();
+		virtual std::string getName();
+		virtual std::string getValue();
 		virtual void setName(const std::string& name);
 		virtual void setValue(const std::string& value);
 		virtual E4XCell& copy() = 0;			// clone 函数
@@ -58,10 +60,10 @@ namespace E4X
 
 		// 类型转换
 		operator E4XIterator();
-		int ToNumber();
-		bool ToBoolean();
-		double ToFloat();
-		std::string ToString();
+		int toNumber();
+		bool toBoolean();
+		double toFloat();
+		std::string toString();
 
 		void insertChildAfter( E4XCell* exist, E4XCell* insert);
 		void insertChildBefore( E4XCell* exist, E4XCell* insert);

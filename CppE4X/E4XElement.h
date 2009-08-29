@@ -14,7 +14,7 @@ namespace E4X
 		const char* parse( const char* xmldata);
 
 		virtual void setValue(const std::string& value);
-		virtual const std::string& getValue();
+		virtual std::string getValue();
 		virtual E4XElement& operator = ( const std::string& strName);
 
 		virtual	E4XElement& copy();

@@ -2,7 +2,6 @@
 
 namespace E4X
 {
-
 	const std::string E4XText::m_pszTextBegin = "<![CDATA[";
 	const std::string E4XText::m_pszTextEnd = "]]>";
 
@@ -64,7 +63,7 @@ namespace E4X
 		{
 			strXml += m_pszTextBegin;
 
-			strXml += getValue();
+			strXml += m_strValue;
 
 			strXml += m_pszTextEnd;
 		}

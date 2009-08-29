@@ -6,6 +6,7 @@
 	ProjectGUID="{5F5BB141-7948-48FA-804F-F3D31506FF42}"
 	RootNamespace="CppE4X"
 	Keyword="Win32Proj"
+	TargetFrameworkVersion="131072"
 	>
 	<Platforms>
 		<Platform
@@ -332,6 +333,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\E4XCharSet.h"
+				>
+			</File>
+			<File
 				RelativePath=".\E4XComment.h"
 				>
 			</File>
@@ -361,10 +366,6 @@
 			</File>
 			<File
 				RelativePath=".\E4XType.h"
-				>
-			</File>
-			<File
-				RelativePath=".\LinCharSet.h"
 				>
 			</File>
 		</Filter>

@@ -1,6 +1,7 @@
-#include "E4X.h"
 #include <sstream>
 #include <iomanip>
+#include "E4X.h"
+#include "E4XCharSet.h"
 
 namespace E4X
 {
@@ -142,27 +143,27 @@ namespace E4X
 	std::string E4XCell::toXmlString( )
 	{
 		std::string strXml;
-		return toXmlStringInternal( strXml, -1);
+		return e4x_utf82a(toXmlStringInternal( strXml, -1));
 	}
 
-	const std::string& E4XCell::getName()
+	std::string E4XCell::getName()
 	{
-		return m_strName;
+		return e4x_utf82a(m_strName);
 	}
 
-	const std::string& E4XCell::getValue()
+	std::string E4XCell::getValue()
 	{
-		return m_strValue;
+		return e4x_utf82a(m_strValue);
 	}
 
 	void E4XCell::setName(const std::string& name)
 	{
-		m_strName = name;
+		m_strName = e4x_a2utf8(name);
 	}
 
 	void E4XCell::setValue(const std::string& value)
 	{
-		m_strValue = value;
+		m_strValue = e4x_a2utf8(value);
 	}
 
 	bool E4XCell::NotEnd(const char* pszBuffer, int nMinSize)
@@ -178,22 +179,22 @@ namespace E4X
 		return pszBuffer == 0? false: true;
 	}
 
-	int E4XCell::ToNumber()
+	int E4XCell::toNumber()
 	{
 		return atoi( getValue().c_str());
 	}
 
-	double E4XCell::ToFloat()
+	double E4XCell::toFloat()
 	{
 		return atof( getValue().c_str());
 	}
 
-	std::string E4XCell::ToString()
+	std::string E4XCell::toString()
 	{
-		return getValue().c_str();
+		return getValue();
 	}
 
-	bool E4XCell::ToBoolean()
+	bool E4XCell::toBoolean()
 	{
 		return getValue()=="true" || getValue()=="yes";
 	}
@@ -234,10 +235,10 @@ namespace E4X
 
 	E4XCell& E4XCell::operator = ( const std::string& value)
 	{
-		m_strValue = value;
+		m_strValue = e4x_a2utf8(value);
 		if( GetType() == E4X_ELEMENT)
 		{
-			E4XCell* cell= new E4XText( m_strValue);
+			E4XCell* cell= new E4XText( e4x_a2utf8(m_strValue));
 			this->appendChild( cell);
 		}
 		return *this;
@@ -449,7 +450,7 @@ namespace E4X
 			src++;
 		}
 
-		return out;
+		return e4x_a2utf8(out);
 	}
 
 	E4XCell* E4XCell::parent()
@@ -461,6 +462,16 @@ namespace E4X
 	{
 		removeAllChild();
 		delete this;
+	}
+
+	const char* E4XCell::parseAnsi(const char* xmldata)
+	{
+		return parse( e4x_a2utf8(xmldata).c_str());
+	}
+
+	std::string E4XCell::toAnsiXmlString()
+	{
+		return e4x_utf82a( toXmlString());
 	}
 
 }  // namespace

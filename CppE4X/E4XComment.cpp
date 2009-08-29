@@ -47,7 +47,7 @@ namespace E4X
 
 		//writeIndent( strXml, nIndent);
 
-		strXml += m_pszCommentBegin + getXmlString(getValue().c_str()) + m_pszCommentEnd;
+		strXml += m_pszCommentBegin + m_strValue + m_pszCommentEnd;
 
 		return strXml;
 	}

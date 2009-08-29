@@ -1,10 +1,5 @@
 #include "E4X.h"
 
-#ifdef WIN32
-#define LIN_CHAR_SET_USE_STL
-#include "LinCharSet.h"
-#endif
-
 namespace E4X
 {
 
@@ -95,11 +90,6 @@ namespace E4X
 				has_utf8_mark = true;
 		}
 
-#ifdef WIN32
-		USE_LIN_CHAR_SET;
-		readString = utf82a( has_utf8_mark? readString.c_str()+3 : readString.c_str());
-		has_utf8_mark = false;
-#endif
 		bool bSuccess = parse( has_utf8_mark? readString.c_str()+3 : readString.c_str())!=0;
 		if( !bSuccess)
 		{
@@ -137,11 +127,7 @@ namespace E4X
 		std::string strXmlString;
 		toXmlStringInternal( strXmlString, 0);
 
-#ifdef WIN32		
-		USE_LIN_CHAR_SET;
-
-		strXmlString = a2utf8( strXmlString);
-#endif
+		file << "\xEF\xBB\xBF";		// utf8 bom
 		file << strXmlString;
 
 		return false;
