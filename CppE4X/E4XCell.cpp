@@ -482,7 +482,7 @@ namespace E4X
 
 	const char* E4XCell::parseAnsi(const char* xmldata)
 	{
-		return parse( e4x_a2utf8(xmldata).c_str());
+		return parse( (e4x_a2utf8(xmldata)).c_str());
 	}
 
 	std::string E4XCell::toAnsiXmlString()

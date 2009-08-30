@@ -65,10 +65,10 @@ namespace E4X
 //#define w2utf8(wcsSrc) _w2utf8(wcsSrc)
 //#define utf82w(pszSrc) _utf82w(pszSrc)
 
-#define e4x_a2utf8(pszSrc)  E4X::_w2a( E4X::_a2w(pszSrc, CP_ACP), CP_UTF8)
-#define e4x_utf82a(pszSrc)  E4X::_w2a( E4X::_a2w(pszSrc, CP_UTF8), CP_ACP)
+#define e4x_a2utf8(pszSrc)  (E4X::_w2a( E4X::_a2w((pszSrc), CP_ACP), CP_UTF8))
+#define e4x_utf82a(pszSrc)  (E4X::_w2a( E4X::_a2w((pszSrc), CP_UTF8), CP_ACP))
 
 #else
-#define e4x_a2utf8( pszSrc) pszSrc
-#define e4x_utf82a( pszSrc) pszSrc
+#define e4x_a2utf8( pszSrc) (std::string(pszSrc))
+#define e4x_utf82a( pszSrc) (std::string(pszSrc))
 #endif

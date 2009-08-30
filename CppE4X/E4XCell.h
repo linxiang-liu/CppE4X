@@ -55,7 +55,7 @@ namespace E4X
 			std::stringstream stream;
 			stream << t;
 			stream >> m_strValue;
-			if( GetType() == E4X_ELEMENT)
+			if( type() == E4X_ELEMENT)
 			{
 				E4XCell* cell= new E4XText( m_strValue);
 				this->appendChild( cell);
