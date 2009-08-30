@@ -57,7 +57,7 @@ namespace E4X
 	{
 		if( m_bNeedEncode)
 		{
-			strXml += getXmlString(getValue().c_str());
+			strXml += getXmlString(m_strValue.c_str());
 		}
 		else
 		{

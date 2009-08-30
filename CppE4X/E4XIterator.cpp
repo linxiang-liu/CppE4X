@@ -1,4 +1,5 @@
 #include "E4X.h"
+#include "E4XCharSet.h"
 
 namespace E4X
 {
@@ -220,36 +221,6 @@ namespace E4X
 		return *m_pSubCell;
 	}
 
-	//template<typename T> E4XIterator& E4XIterator::operator = ( T& t)
-	//{
-	//	getCell() = t;
-	//	return *this;
-	//}
-
-	//E4XIterator& E4XIterator::operator = ( const std::string& strName)
-	//{
-	//	getCell() = strName;
-	//	return *this;
-	//}
-
-	//E4XIterator& E4XIterator::operator = ( const char* strName)
-	//{
-	//	getCell() = std::string(strName);
-	//	return *this;
-	//}
-
-	//E4XIterator& E4XIterator::operator = ( bool bFlag)
-	//{
-	//	getCell() = bFlag;
-	//	return *this;
-	//}
-
-	//E4XIterator& E4XIterator::operator = ( int nNumber)
-	//{
-	//	getCell() = nNumber;
-	//	return *this;
-	//}
-
 	std::string E4XIterator::toXmlString()
 	{
 		std::string strXml;
@@ -262,6 +233,11 @@ namespace E4X
 		}
 
 		return strXml;
+	}
+
+	std::string E4XIterator::toAnsiXmlString()
+	{
+		return e4x_utf82a( toXmlString());
 	}
 
 	int E4XIterator::toNumber()

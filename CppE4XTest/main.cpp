@@ -39,7 +39,7 @@ void test_read_write_file()
 		std::cout << (itnew/"heihei"/"hoho"/"heihei").toXmlString() << std::endl;
 
 		E4XIterator itremove( doc["exec"]["item"]);
-		std::cout << itremove.toXmlString() << std::endl;
+		std::cout << itremove.toAnsiXmlString() << std::endl;
 
 		while( itremove.hasNext())
 		{
@@ -70,13 +70,9 @@ void test_parse()
 	E4XElement element;
 	element.parseAnsi("<hehe xx=\"heihei\'ha测试中文字符串h&amp;a\'hoho\"   ></hehe>");
 	
-	E4XElement e("<element data=\"element_data\" ><abc  value=\"letter中英文混合\"  /></element>");
-
 	E4XElement in("<invoke name=\"PlayMovie\" returntype=\"xml\"><arguments /></invoke>");
 
 	std::cout << element.toAnsiXmlString() << std::endl;
-
-	std::cout << e.toXmlString() << std::endl;
 
 	std::cout << in["arguments"].toXmlString() << std::endl;
 	std::cout << in["@name"].toXmlString() << std::endl;

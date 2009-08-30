@@ -26,6 +26,7 @@ namespace E4X
 		//operator E4XCell&();
 
 		std::string toXmlString();
+		std::string toAnsiXmlString();
 
 		// ≤Â»Î
 

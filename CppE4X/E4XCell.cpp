@@ -164,7 +164,7 @@ namespace E4X
 	std::string E4XCell::toXmlString( )
 	{
 		std::string strXml;
-		return e4x_utf82a(toXmlStringInternal( strXml, -1));
+		return toXmlStringInternal( strXml, -1);
 	}
 
 	std::string E4XCell::getName()
@@ -259,7 +259,7 @@ namespace E4X
 		m_strValue = e4x_a2utf8(value);
 		if( type() == E4X_ELEMENT)
 		{
-			E4XCell* cell= new E4XText( e4x_a2utf8(m_strValue));
+			E4XCell* cell= new E4XText( m_strValue);
 			this->appendChild( cell);
 		}
 		return *this;
@@ -466,7 +466,7 @@ namespace E4X
 			src++;
 		}
 
-		return e4x_a2utf8(out);
+		return out;
 	}
 
 	E4XCell* E4XCell::parent()
