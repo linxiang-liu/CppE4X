@@ -92,7 +92,7 @@ namespace E4X
 									int nTextBeginSize = E4XText::m_pszTextBegin.length();
 
 									const char* pTemp = pNewPos;
-									if( !NotEnd( pTemp, nCommentBeginSize)) return 0;
+									if( !notEnd( pTemp, nCommentBeginSize)) return 0;
 
 									if( memcmp( pNewPos-1, E4XComment::m_pszCommentBegin.c_str(), nCommentBeginSize) == 0)
 									{
@@ -104,7 +104,7 @@ namespace E4X
 									}
 									else
 									{
-										if( !NotEnd( pTemp, nTextBeginSize)) return 0;
+										if( !notEnd( pTemp, nTextBeginSize)) return 0;
 										if( memcmp( pNewPos-1, E4XText::m_pszTextBegin.c_str(), nTextBeginSize) == 0)
 										{
 											E4XText* pCell = new E4XText;
@@ -158,7 +158,7 @@ namespace E4X
 		while( itAttribute.hasNext())
 		{
 			E4XCell& cell = itAttribute.next();
-			if( cell.GetType() == E4X_ATTRIBUTE)
+			if( cell.type() == E4X_ATTRIBUTE)
 			{
 				nAttribCount++;
 				cell.toXmlStringInternal( strXml, nSubIndent);
@@ -177,9 +177,9 @@ namespace E4X
 			while( it.hasNext())
 			{
 				E4XCell& cell = it.next();
-				if( cell.GetType() != E4X_ATTRIBUTE)
+				if( cell.type() != E4X_ATTRIBUTE)
 				{
-					if( cell.GetType() == E4X_TEXT)
+					if( cell.type() == E4X_TEXT)
 					{
 						bNeedIndent = false;
 					}
@@ -207,7 +207,7 @@ namespace E4X
 		E4XIterator it(*this, std::string());
 		while( it.hasNext())
 		{
-			if( it.next().GetType() == E4X_TEXT)
+			if( it.next().type() == E4X_TEXT)
 				it.remove();
 		}
 
@@ -224,7 +224,7 @@ namespace E4X
 		while( it.hasNext())
 		{
 			E4XCell& cell = it.next();
-			if( cell.GetType() == E4X_TEXT) m_strValue += cell.getValue();
+			if( cell.type() == E4X_TEXT) m_strValue += cell.getValue();
 		}
 
 		return m_strValue;

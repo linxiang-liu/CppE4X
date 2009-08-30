@@ -30,8 +30,6 @@ void test_read_write_file()
 			std::cout << e.Error() << std::endl;
 		}
 
-		std::cout << doc["exec"].toXmlString() << std::endl;
-
 		E4XIterator itnew( doc["exec"]);
 
 		itnew["heihei"]["hoho"]["@haha"]= true;
@@ -52,8 +50,6 @@ void test_read_write_file()
 		itremove.getCell().appendChild( &pCellExec);
 
 		doc.saveFile( "output.xml");
-
-		std::cout << doc.toXmlString() << std::endl;
 
 		pDoc.destroy();
 	}

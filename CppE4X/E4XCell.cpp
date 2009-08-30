@@ -81,7 +81,7 @@ namespace E4X
 		return 0;
 	}
 
-	int E4XCell::GetType()
+	int E4XCell::type()
 	{
 		return m_nType;
 	}
@@ -93,12 +93,23 @@ namespace E4X
 		pCell->m_pParent = this;
 	}
 
+	void E4XCell::appendChild( E4XCell& cell)
+	{
+		appendChild( &cell);
+	}
+
 	void E4XCell::prependChild( E4XCell* pCell)
 	{
 		assert( pCell->m_pParent == 0);
 		m_lstCell.push_front( pCell);
 		pCell->m_pParent = this;
 	}
+
+	void E4XCell::prependChild( E4XCell& cell)
+	{
+		prependChild( &cell);
+	}
+
 
 	void E4XCell::insertChildAfter( E4XCell* exist, E4XCell* insert)
 	{
@@ -109,12 +120,22 @@ namespace E4X
 		m_lstCell.insert( it, insert);	
 	}
 
+	void E4XCell::insertChildAfter( E4XCell& exist, E4XCell& insert)
+	{
+		insertChildAfter( &exist, &insert);
+	}
+
 	void E4XCell::insertChildBefore( E4XCell* exist, E4XCell* insert)
 	{
 		std::list<E4XCell*>::iterator it;
 		it = std::find( m_lstCell.begin(), m_lstCell.end(),exist);
 		assert( it != m_lstCell.end());
 		m_lstCell.insert( it, insert);	
+	}
+
+	void E4XCell::insertChildBefore( E4XCell& exist, E4XCell& insert)
+	{
+		insertChildBefore( &exist, &insert);
 	}
 
 	bool E4XCell::removeChild( E4XCell* pCell)
@@ -166,7 +187,7 @@ namespace E4X
 		m_strValue = e4x_a2utf8(value);
 	}
 
-	bool E4XCell::NotEnd(const char* pszBuffer, int nMinSize)
+	bool E4XCell::notEnd(const char* pszBuffer, int nMinSize)
 	{
 		for( int i = 0; i< nMinSize; i++)
 		{
@@ -236,7 +257,7 @@ namespace E4X
 	E4XCell& E4XCell::operator = ( const std::string& value)
 	{
 		m_strValue = e4x_a2utf8(value);
-		if( GetType() == E4X_ELEMENT)
+		if( type() == E4X_ELEMENT)
 		{
 			E4XCell* cell= new E4XText( e4x_a2utf8(m_strValue));
 			this->appendChild( cell);
@@ -257,11 +278,6 @@ namespace E4X
 	E4XIterator E4XCell::operator[](const std::string& strChildName)
 	{
 		return E4XIterator( *this, strChildName);
-	}
-
-	E4XCell& E4XCell::GetParent()
-	{
-		return *m_pParent;
 	}
 
 	std::string E4XCell::getRealString(const char* src)

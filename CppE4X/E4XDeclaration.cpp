@@ -20,7 +20,7 @@ namespace E4X
 		m_strName = m_pszDeclarationName;
 		int nBeginSize = m_pszDeclarationBegin.length();
 		int nEndSize = m_pszDeclarationEnd.length();
-		if( !NotEnd( xmldata, nBeginSize + nEndSize))
+		if( !notEnd( xmldata, nBeginSize + nEndSize))
 			return 0;
 
 		const char* pData = xmldata;

@@ -23,7 +23,7 @@ namespace E4X
 	{
 		int nBeginSize = m_pszCommentBegin.length();
 		int nEndSize = m_pszCommentEnd.length();
-		if( !NotEnd( xmldata, nBeginSize + nEndSize))	//  not enough size
+		if( !notEnd( xmldata, nBeginSize + nEndSize))	//  not enough size
 			return 0;
 
 		if(	memcmp( xmldata, m_pszCommentBegin.c_str(), nBeginSize) != 0)

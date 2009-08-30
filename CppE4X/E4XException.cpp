@@ -11,7 +11,7 @@ namespace E4X
 	{
 	}
 
-	int E4XException::getErrorCode()
+	int E4XException::errorCode()
 	{
 		return m_ec;
 	}

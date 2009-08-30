@@ -14,23 +14,36 @@ namespace E4X
 	public:
 		virtual ~E4XCell(void);
 
+		E4XCell* parent();
+
 		// virtual
 		virtual const char* parse( const char* xmldata) = 0;
 		const char* parseAnsi(const char* xmldata);
 		virtual std::string& toXmlStringInternal( std::string& strXml, int nIndent) = 0;
-		std::string toXmlString();
-		std::string toAnsiXmlString();
 		virtual std::string getName();
 		virtual std::string getValue();
 		virtual void setName(const std::string& name);
 		virtual void setValue(const std::string& value);
 		virtual E4XCell& copy() = 0;			// clone 函数
 		virtual void destroy();					// 销毁由copy产生的对象。
+		std::string toXmlString();
+		std::string toAnsiXmlString();
 
-		int GetType();
-		E4XCell& GetParent();
+		int type();
 		void appendChild( E4XCell* pCell);
+		void appendChild( E4XCell& cell);
 		void prependChild( E4XCell* pCell);
+		void prependChild( E4XCell& cell);
+
+		void insertChildAfter( E4XCell* exist, E4XCell* insert);
+		void insertChildAfter( E4XCell& exist, E4XCell& insert);
+
+		void insertChildBefore( E4XCell* exist, E4XCell* insert);
+		void insertChildBefore( E4XCell& exist, E4XCell& insert);
+
+		bool removeChild( E4XCell* pCell);
+		void removeAllChild();
+		void removeAllChildElement();
 
 		// 运算符重载
 		E4XIterator operator/(const std::string& strChildName);
@@ -65,20 +78,11 @@ namespace E4X
 		double toFloat();
 		std::string toString();
 
-		void insertChildAfter( E4XCell* exist, E4XCell* insert);
-		void insertChildBefore( E4XCell* exist, E4XCell* insert);
-
-		bool removeChild( E4XCell* pCell);
-		void removeAllChild();
-		void removeAllChildElement();
-
-		E4XCell* parent();
-
 	protected:
 		const char* skipWhiteSpace(const char* pszIn);
 		const char* skipValueChars(const char* pszIn);
 		std::string& writeIndent( std::string& strXml, int nIndent);
-		bool NotEnd(const char* pszBuffer, int nMinSize);
+		bool notEnd(const char* pszBuffer, int nMinSize);
 
 		static std::string getRealString(const char* src);
 		static std::string getXmlString(const char* src);

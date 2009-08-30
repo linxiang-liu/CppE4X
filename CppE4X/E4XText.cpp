@@ -22,7 +22,7 @@ namespace E4X
 	{
 		int nBeginSize = m_pszTextBegin.length();
 		int nEndSize = m_pszTextEnd.length();
-		if( NotEnd( xmldata, nBeginSize + nEndSize) )
+		if( notEnd( xmldata, nBeginSize + nEndSize) )
 		{
 			if( memcmp( m_pszTextBegin.c_str(), xmldata, nBeginSize) == 0)
 			{

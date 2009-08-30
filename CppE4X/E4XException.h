@@ -20,7 +20,7 @@ namespace E4X
 		E4XException(E4XErrorCode ec = ERROR_UNKNOWN);
 		~E4XException(void);
 
-		int getErrorCode();
+		int errorCode();
 
 		const char* Error(void);
 
