@@ -188,16 +188,16 @@ namespace E4X
 		return generalASubCell();
 	}
 
-	//E4XIterator::operator E4XCell&()
-	//{
-	//	E4XIterator it( *this);
-	//	if( it.hasNext())
-	//	{
-	//		return it.next();
-	//	}
+	E4XIterator::operator E4XCell&()
+	{
+		E4XIterator it( *this);
+		if( it.hasNext())
+		{
+			return it.next();
+		}
 
-	//	return generalASubCell();
-	//}
+		return generalASubCell();
+	}
 
 	E4XCell& E4XIterator::generalASubCell()
 	{

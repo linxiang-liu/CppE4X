@@ -23,7 +23,7 @@ namespace E4X
 		E4XCell& operator/( int index);
 		E4XIterator operator[]( const std::string& strName);
 		E4XCell& operator[](int nIndex);
-		//operator E4XCell&();
+		operator E4XCell&();
 
 		std::string toXmlString();
 		std::string toAnsiXmlString();
