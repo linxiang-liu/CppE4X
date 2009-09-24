@@ -150,6 +150,7 @@ namespace E4X
 
 		return false;
 	}
+	
 	std::string& E4XCell::writeIndent( std::string& strXml, int nIndent)
 	{
 		if( nIndent != -1)
@@ -161,18 +162,18 @@ namespace E4X
 		return strXml;
 	}
 
-	std::string E4XCell::toXmlString( )
+	const std::string E4XCell::toXmlString( )
 	{
 		std::string strXml;
 		return toXmlStringInternal( strXml, -1);
 	}
 
-	std::string E4XCell::getName()
+	const std::string E4XCell::getName()
 	{
 		return e4x_utf82a(m_strName);
 	}
 
-	std::string E4XCell::getValue()
+	const std::string E4XCell::getValue()
 	{
 		return e4x_utf82a(m_strValue);
 	}
@@ -210,7 +211,7 @@ namespace E4X
 		return atof( getValue().c_str());
 	}
 
-	std::string E4XCell::toString()
+	const std::string E4XCell::toString()
 	{
 		return getValue();
 	}
@@ -485,7 +486,7 @@ namespace E4X
 		return parse( (e4x_a2utf8(xmldata)).c_str());
 	}
 
-	std::string E4XCell::toAnsiXmlString()
+	const std::string E4XCell::toAnsiXmlString()
 	{
 		return e4x_utf82a( toXmlString());
 	}

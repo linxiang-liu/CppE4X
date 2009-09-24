@@ -217,7 +217,7 @@ namespace E4X
 	}
 
 
-	std::string E4XElement::getValue()
+	const std::string E4XElement::getValue()
 	{
 		E4XIterator it(*this, std::string());
 

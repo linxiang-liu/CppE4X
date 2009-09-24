@@ -25,8 +25,8 @@ namespace E4X
 		E4XCell& operator[](int nIndex);
 		operator E4XCell&();
 
-		std::string toXmlString();
-		std::string toAnsiXmlString();
+		const std::string toXmlString();
+		const std::string toAnsiXmlString();
 
 		// ≤Â»Î
 
@@ -43,10 +43,10 @@ namespace E4X
 		int toNumber();
 		bool toBoolean();
 		double toFloat();
-		std::string toString();
+		const std::string toString();
 
-		std::string getName();
-		std::string getValue();
+		const std::string getName();
+		const std::string getValue();
 
 
 	private:

@@ -221,7 +221,7 @@ namespace E4X
 		return *m_pSubCell;
 	}
 
-	std::string E4XIterator::toXmlString()
+	const std::string E4XIterator::toXmlString()
 	{
 		std::string strXml;
 
@@ -235,7 +235,7 @@ namespace E4X
 		return strXml;
 	}
 
-	std::string E4XIterator::toAnsiXmlString()
+	const std::string E4XIterator::toAnsiXmlString()
 	{
 		return e4x_utf82a( toXmlString());
 	}
@@ -255,17 +255,17 @@ namespace E4X
 		return getCell().toFloat();
 	}
 
-	std::string E4XIterator::toString()
+	const std::string E4XIterator::toString()
 	{
 		return getCell().toString();
 	}
 
-	std::string E4XIterator::getName()
+	const std::string E4XIterator::getName()
 	{
 		return getCell().getName();
 	}
 
-	std::string E4XIterator::getValue()
+	const std::string E4XIterator::getValue()
 	{
 		return getCell().getValue();
 	}

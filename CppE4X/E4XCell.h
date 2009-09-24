@@ -20,14 +20,14 @@ namespace E4X
 		virtual const char* parse( const char* xmldata) = 0;
 		const char* parseAnsi(const char* xmldata);
 		virtual std::string& toXmlStringInternal( std::string& strXml, int nIndent) = 0;
-		virtual std::string getName();
-		virtual std::string getValue();
+		virtual const std::string getName();
+		virtual const std::string getValue();
 		virtual void setName(const std::string& name);
 		virtual void setValue(const std::string& value);
 		virtual E4XCell& copy() = 0;			// clone 函数
 		virtual void destroy();					// 销毁由copy产生的对象。
-		std::string toXmlString();
-		std::string toAnsiXmlString();
+		const std::string toXmlString();
+		const std::string toAnsiXmlString();
 
 		int type();
 		void appendChild( E4XCell* pCell);
@@ -76,7 +76,7 @@ namespace E4X
 		int toNumber();
 		bool toBoolean();
 		double toFloat();
-		std::string toString();
+		const std::string toString();
 
 	protected:
 		const char* skipWhiteSpace(const char* pszIn);
