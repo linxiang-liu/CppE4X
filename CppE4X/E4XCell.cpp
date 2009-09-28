@@ -491,4 +491,10 @@ namespace E4X
 		return e4x_utf82a( toXmlString());
 	}
 
+	void E4XCell::removeFromParent()
+	{
+		if( m_pParent == 0) return;
+		m_pParent->removeChild( this);
+	}
+
 }  // namespace

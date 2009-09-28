@@ -1,86 +1,393 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<exec hehe="&amp;a"> <!-- hehe -<sdfs></sdfd> -->
-  <![CDATA[ haha ]]>
-  <friction>4</friction>
-    <item>
-        <minipic>&#x11;data\TOUCHWIN\会展.JPG</minipic>
-        <detail>
-          <![CDATA[data\TOUCHWIN\会展.b<mp]]></detail>
-        <exepath>Exhibition.exe</exepath>
-        <title>打开应用程序3</title>
-      <!-- hehe -<sdfs></sdfd> -->
-      <![CDATA[ haha ]]>
-        <content>这是一个游戏</content>
-    </item>
-    <item>
-        <minipic>data\TOUCHWIN\移动.JPG</minipic>
-        <detail>data\TOUCHWIN\大移动.JPG</detail>
-        <exepath>Non-governmental.exe</exepath>
-        <title>打开应用程序3</title>
-        <content>这是一个游戏</content>
-    </item>
-    <item>
-        <minipic>data\TOUCHWIN\政府.JPG<!-- hehe -<sdfs></sdfd> -->
-      </minipic>
-        <detail>data\TOUCHWIN\大政府.JPG</detail>
-        <exepath>governmental.exe</exepath>
-        <title>打开应用程序3</title>
-        <content>这是一个游戏</content>
-    </item>
-    <item>
-        <minipic>data\TOUCHWIN\导航.JPG</minipic>
-        <detail>data\TOUCHWIN\大导航.JPG</detail>
-        <exepath>AppLoader.swf</exepath>
-        <title>打开应用程序1</title>
-        <content>这是一个游戏</content>
-    </item>
-    <item>
-        <minipic>data\TOUCHWIN\图片.jpg</minipic>
-        <detail>data\TOUCHWIN\大图片.jpg</detail>
-        <exepath>photo.swf</exepath>
-        <title>打开应用程序2</title>
-        <content>这是一个动画</content>
-    </item>
-    <item>
-        <minipic>data\TOUCHWIN\火.jpg</minipic>
-        <detail>data\TOUCHWIN\大火焰.jpg</detail>
-        <exepath>fire.swf</exepath>
-        <title>打开应用程序4</title>
-        <content>这是一个动画</content>
-    </item>
-    <item>
-        <minipic>data\TOUCHWIN\地图.jpg</minipic>
-        <detail>data\TOUCHWIN\大地图.jpg</detail>
-        <exepath>fscommand\google_earth_test1.exe</exepath>
-        <title>打开应用程序2</title>
-        <content>这是一个动画</content>
-    </item>
-    <item>
-        <minipic>data\TOUCHWIN\视频.jpg</minipic>
-        <detail>data\TOUCHWIN\大视频.jpg</detail>
-        <exepath>Media_app_v2.swf</exepath>
-        <title>打开应用程序3</title>
-        <content>这是一个游戏</content>
-    </item>
-    <item>
-        <minipic>data\TOUCHWIN\冲击波.jpg</minipic>
-        <detail>data\TOUCHWIN\大冲击波.jpg</detail>
-        <exepath>fscommand\smoke\smoke.exe</exepath>
-        <title>打开应用程序3</title>
-        <content>这是一个游戏</content>
-    </item>
-    <item>
-        <minipic>data\TOUCHWIN\multikey.JPG</minipic>
-        <detail>data\TOUCHWIN\MultiKey_screenshot.jpg</detail>
-        <exepath>MultiKey.swf</exepath>
-        <title>打开应用程序3</title>
-        <content>这是一个游戏</content>
-    </item>
-    <item>
-        <minipic>data\TOUCHWIN\拼图.jpg</minipic>
-        <detail>data\TOUCHWIN\大拼图.jpg</detail>
-        <exepath>Puzzle.swf</exepath>
-        <title>打开应用程序3</title>
-        <content>这是一个游戏</content>
-    </item>
-</exec>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title><![CDATA[ClassyK]]></title>
+<link>http://www.panzhishi.com/classyk/</link>
+<description><![CDATA[工作与思考]]></description>
+<language>zh-cn</language>
+<copyright><![CDATA[Copyright 2005 PBlog3 v2.8]]></copyright>
+<webMaster><![CDATA[classyk#vip.qq.com(ClassyK)]]></webMaster>
+<generator>PBlog2 v2.4</generator> 
+<image>
+	<title>ClassyK</title>
+	<url>http://www.panzhishi.com/classyk/images/logos.gif</url>
+	<link>http://www.panzhishi.com/classyk/</link>
+	<description>ClassyK</description>
+</image>
+
+			<item>
+			<link>http://www.panzhishi.com/classyk/article.asp?id=104</link>
+			<title><![CDATA[CppE4X更新]]></title>
+			<author>classyk#vip.qq.com(ClassyK)</author>
+			<category><![CDATA[C/C++]]></category>
+			<pubDate>Sat,29 Aug 2009 23:23:03 +0800</pubDate>
+			<guid>http://www.panzhishi.com/classyk/default.asp?id=104</guid>
+		<description><![CDATA[<p>&nbsp;&nbsp;&nbsp; 这次更新比较大，同时修改了字符集转换函数，这样在其他工程里使用LinCharSet.h的时候不会产生编译/链接问题。</p>
+<p>&nbsp;&nbsp;&nbsp; 解决了很多bug，同时考虑到使用方便的问题，增加了一部分更加方便处理的函数。</p>
+<p>&nbsp;&nbsp;&nbsp; 文档依然没有做。</p>
+<p>&nbsp;&nbsp;&nbsp; release cppe4x v2;</p>
+<p>&nbsp;&nbsp;&nbsp; <a target="_blank" href="http://code.google.com/p/cppe4x/">CppE4X on GoogleCode</a></p>]]></description>
+		</item>
+		
+			<item>
+			<link>http://www.panzhishi.com/classyk/article.asp?id=103</link>
+			<title><![CDATA[字符集转换（更新）]]></title>
+			<author>classyk#vip.qq.com(ClassyK)</author>
+			<category><![CDATA[C/C++]]></category>
+			<pubDate>Mon,17 Aug 2009 13:51:13 +0800</pubDate>
+			<guid>http://www.panzhishi.com/classyk/default.asp?id=103</guid>
+		<description><![CDATA[<p>当工程中混用stl与非stl模式的时候，原来的代码容易产生问题。</p>
+<p>主要原因是因为stl与非stl版本的函数名相同。故此稍作修改，让他们可以一定程度并存下来。</p>
+<div class="codeText">
+<div class="codeHead">C++代码</div>
+<ol class="dp-cpp">
+    <li class="alt"><span><span class="preprocessor">#pragma&nbsp;once </span><span>&nbsp;&nbsp;</span></span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#include&nbsp;&lt;malloc.h&gt; </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#include&nbsp;&lt;windows.h&gt; </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;USE_LIN_CHAR_SET_VARIANT&nbsp;char*&nbsp;_lin_dst&nbsp;=&nbsp;0;&nbsp;wchar_t*&nbsp;_lin_wdst&nbsp;=&nbsp;0;&nbsp;int&nbsp;_lin_dst_size&nbsp;=&nbsp;0; </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;LIN_CHAR_SET_NO_WARNING&nbsp;&nbsp;_lin_dst;&nbsp;_lin_wdst;_lin_dst_size; </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;USE_LIN_CHAR_SET&nbsp;USE_LIN_CHAR_SET_VARIANT;LIN_CHAR_SET_NO_WARNING </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#ifdef&nbsp;LIN_CHAR_SET_USE_STL </span><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#include&nbsp;&lt;string&gt; </span><span>&nbsp;&nbsp;</span></li>
+    <li><span>std::string&nbsp;_w2a_s(&nbsp;</span><span class="keyword">const</span><span>&nbsp;std::wstring&amp;&nbsp;pwcsSrc,&nbsp;</span><span class="datatypes">int</span><span>&nbsp;codepage) &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>{ &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;USE_LIN_CHAR_SET; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;_lin_dst_size&nbsp;=&nbsp;pwcsSrc.size()*3; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;_lin_dst&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;(std::</span><span class="keyword">nothrow</span><span>)&nbsp;</span><span class="datatypes">char</span><span>[&nbsp;_lin_dst_size]; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">if</span><span>(&nbsp;_lin_dst&nbsp;==&nbsp;0)&nbsp;</span><span class="keyword">return</span><span>&nbsp;std::string(); &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;_lin_dst_size&nbsp;=&nbsp;WideCharToMultiByte(&nbsp;codepage,&nbsp;0,&nbsp;pwcsSrc.c_str(),&nbsp;pwcsSrc.length(),&nbsp;_lin_dst,&nbsp;_lin_dst_size,&nbsp;0,&nbsp;0); &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">if</span><span>(&nbsp;_lin_dst_size&nbsp;==&nbsp;0)&nbsp; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">delete</span><span>[]&nbsp;_lin_dst; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">return</span><span>&nbsp;std::string(); &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;_lin_dst[_lin_dst_size]&nbsp;=&nbsp;0; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;std::string&nbsp;result&nbsp;=&nbsp;_lin_dst; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">delete</span><span>[]&nbsp;_lin_dst; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">return</span><span>&nbsp;result; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>} &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>std::wstring&nbsp;_a2w_s(&nbsp;</span><span class="keyword">const</span><span>&nbsp;std::string&amp;&nbsp;pszSrc,&nbsp;</span><span class="datatypes">int</span><span>&nbsp;codepage) &nbsp;&nbsp;</span></li>
+    <li><span>{ &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;USE_LIN_CHAR_SET; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;_lin_dst_size&nbsp;=&nbsp;pszSrc.size()*2; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;_lin_wdst&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;(std::</span><span class="keyword">nothrow</span><span>)&nbsp;</span><span class="datatypes">wchar_t</span><span>&nbsp;[&nbsp;_lin_dst_size]; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">if</span><span>(&nbsp;_lin_wdst&nbsp;==&nbsp;0)&nbsp;</span><span class="keyword">return</span><span>&nbsp;std::wstring(); &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;_lin_dst_size&nbsp;=&nbsp;MultiByteToWideChar(&nbsp;codepage,&nbsp;0,&nbsp;pszSrc.c_str(),&nbsp;pszSrc.length(),&nbsp;_lin_wdst,_lin_dst_size); &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">if</span><span>(&nbsp;_lin_dst_size&nbsp;==&nbsp;0) &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">delete</span><span>[]&nbsp;_lin_wdst; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">return</span><span>&nbsp;std::wstring(); &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;_lin_wdst[_lin_dst_size]&nbsp;=&nbsp;0; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;std::wstring&nbsp;result&nbsp;=&nbsp;_lin_wdst; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">delete</span><span>[]&nbsp;_lin_wdst; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">return</span><span>&nbsp;result; &nbsp;&nbsp;</span></li>
+    <li><span>} &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;_utf82w(&nbsp;pszSrc)&nbsp;_a2w_s(&nbsp;pszSrc,&nbsp;CP_UTF8) </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;_w2utf8(&nbsp;pszSrc)&nbsp;_w2a_s(&nbsp;pszSrc,&nbsp;CP_UTF8) </span><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;_utf72w(&nbsp;pszSrc)&nbsp;_a2w_s(&nbsp;pszSrc,&nbsp;CP_UTF7) </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;_w2utf7(&nbsp;pszSrc)&nbsp;_w2a_s(&nbsp;pszSrc,&nbsp;CP_UTF7) </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="comment">//&nbsp;导出的宏 </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;a2w(pszSrc)&nbsp;_a2w_s(pszSrc,&nbsp;CP_ACP) </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;w2a(tcsSrc)&nbsp;_w2a_s(tcsSrc,&nbsp;CP_ACP) </span><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#else </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;_w2a(&nbsp;pwcsSrc,&nbsp;codepage)&nbsp;(&nbsp;pwcsSrc&nbsp;==&nbsp;0?&nbsp;0:(&nbsp;\ </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;(_lin_dst&nbsp;=&nbsp;(</span><span class="datatypes">char</span><span>*)_alloca(&nbsp;((_lin_dst_size&nbsp;=&nbsp;(</span><span class="datatypes">int</span><span>)wcslen(&nbsp;pwcsSrc))+&nbsp;1)*3))==&nbsp;0?&nbsp;0&nbsp;:&nbsp;(\ &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;(_lin_dst_size&nbsp;=&nbsp;WideCharToMultiByte(&nbsp;codepage,&nbsp;0,&nbsp;pwcsSrc,&nbsp;_lin_dst_size,&nbsp;_lin_dst,&nbsp;_lin_dst_size*3,&nbsp;0,&nbsp;0))==0?&nbsp;\ &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;((_lin_dst[0]=0)==0&nbsp;?&nbsp;_lin_dst:0):&nbsp;(\ &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;(_lin_dst[_lin_dst_size]&nbsp;=&nbsp;0)&nbsp;==&nbsp;0?&nbsp;_lin_dst&nbsp;:&nbsp;0)))) &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;_a2w(&nbsp;pszSrc,&nbsp;codepage)&nbsp;(pszSrc&nbsp;==&nbsp;0?&nbsp;0&nbsp;:&nbsp;(\ </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;(_lin_wdst&nbsp;=&nbsp;(</span><span class="datatypes">wchar_t</span><span>*)_alloca(&nbsp;((_lin_dst_size&nbsp;=&nbsp;(</span><span class="datatypes">int</span><span>)strlen(&nbsp;pszSrc))&nbsp;+&nbsp;1)*2))&nbsp;==&nbsp;0?&nbsp;0&nbsp;:&nbsp;(\ &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;(_lin_dst_size&nbsp;=&nbsp;MultiByteToWideChar(&nbsp;codepage,&nbsp;0,&nbsp;pszSrc,&nbsp;_lin_dst_size,&nbsp;_lin_wdst,_lin_dst_size&nbsp;+&nbsp;</span><span class="keyword">sizeof</span><span>(</span><span class="datatypes">wchar_t</span><span>)))&nbsp;==&nbsp;0?&nbsp;\ &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;((_lin_wdst[0]=0)==0?&nbsp;_lin_wdst:0)&nbsp;:&nbsp;(\ &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;(_lin_wdst[&nbsp;_lin_dst_size]&nbsp;=&nbsp;0)&nbsp;==&nbsp;0?&nbsp;_lin_wdst:&nbsp;0)))) &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;_utf82w(&nbsp;pszSrc)&nbsp;_a2w(&nbsp;pszSrc,&nbsp;CP_UTF8) </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;_w2utf8(&nbsp;pszSrc)&nbsp;_w2a(&nbsp;pszSrc,&nbsp;CP_UTF8) </span><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;_utf72w(&nbsp;pszSrc)&nbsp;_a2w(&nbsp;pszSrc,&nbsp;CP_UTF7) </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;_w2utf7(&nbsp;pszSrc)&nbsp;_w2a(&nbsp;pszSrc,&nbsp;CP_UTF7) </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="comment">//&nbsp;导出的宏 </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;a2w(pszSrc)&nbsp;_a2w(pszSrc,&nbsp;CP_ACP) </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;w2a(tcsSrc)&nbsp;_w2a(tcsSrc,&nbsp;CP_ACP) </span><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#endif </span><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#ifdef&nbsp;UNICODE </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;a2t(pszSrc)&nbsp;a2w(pszSrc) </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;t2a(tcsSrc)&nbsp;w2a(tcsSrc) </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;w2t(wcsSrc)&nbsp;wcsSrc; </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;t2w(tcsSrc)&nbsp;tcsSrc; </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#else </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;a2t(pszSrc)&nbsp;pszSrc </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;t2a(tcsSrc)&nbsp;tcsSrc </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;w2t(wcsSrc)&nbsp;wta(wcsSrc) </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;t2w(tcsSrc)&nbsp;a2w(tcsSrc) </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#endif </span><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;w2utf8(wcsSrc)&nbsp;_w2utf8(wcsSrc) </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;utf82w(pszSrc)&nbsp;_utf82w(pszSrc) </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;w2utf7(wcsSrc)&nbsp;_w2utf7(wcsSrc) </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;utf72w(pszSrc)&nbsp;_utf72w(pszSrc) </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;a2utf8(pszSrc)&nbsp;w2utf8(a2w(pszSrc)) </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;a2utf7(pszSrc)&nbsp;w2utf7(a2w(pszSrc)) </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;utf82a(pszSrc)&nbsp;w2a(utf82w(pszSrc)) </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;utf72a(pszSrc)&nbsp;w2a(utf72w(pszSrc)) </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;t2utf8(tcsSrc)&nbsp;w2utf8(tcsSrc) </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;t2utf7(tcsSrc)&nbsp;w2utf7(tcsSrc) </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#define&nbsp;utf82t(pszSrc)&nbsp;w2t(utf82w(pszSrc)) </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;utf72t(pszSrc)&nbsp;w2t(utf72w(pszSrc)) </span><span>&nbsp;&nbsp;</span></li>
+</ol>
+</div>]]></description>
+		</item>
+		
+			<item>
+			<link>http://www.panzhishi.com/classyk/article.asp?id=102</link>
+			<title><![CDATA[单眼与距离识别]]></title>
+			<author>classyk#vip.qq.com(ClassyK)</author>
+			<category><![CDATA[生活日志]]></category>
+			<pubDate>Fri,24 Jul 2009 12:49:59 +0800</pubDate>
+			<guid>http://www.panzhishi.com/classyk/default.asp?id=102</guid>
+		<description><![CDATA[<p>&nbsp;&nbsp;&nbsp; 前阵子有人说，人的单眼是没法测定物体和人的距离的。而对于此，我的想法是不同的。</p>
+<p>&nbsp;&nbsp;&nbsp; 如果把人眼看成是范焦镜头（手机上大量使用的(不带AF功能的)摄像头大部分使用的范焦镜头），那么这个说法也许正确。然而人眼不是范焦的。</p>
+<p>&nbsp;&nbsp;&nbsp; 想想DC的对焦功能，如果使用单反，镜头是更是有对焦环，对焦环上的刻度，会指示出当前对焦点和相机机身之间的距离。相机只需要使用一个镜头，就能识别到物品与相机的距离，关键原因就在于对焦，只有位于对焦点（及其附近）的物体，才会产生清晰的影像。对焦和精确对焦却又是不同。当使用大光圈的时候，精确对焦尤其重要，因为差以毫厘，就可能导致影像的模糊。</p>
+<p>&nbsp;&nbsp;&nbsp; 人眼也是如此，我们看东西的时候，眼球需要对焦，才能看到清晰的画面。这个时侯，就算只用单眼，我们也能够察觉出物体与自己之间的距离及变化。</p>]]></description>
+		</item>
+		
+			<item>
+			<link>http://www.panzhishi.com/classyk/article.asp?id=97</link>
+			<title><![CDATA[delay load]]></title>
+			<author>classyk#vip.qq.com(ClassyK)</author>
+			<category><![CDATA[C/C++]]></category>
+			<pubDate>Mon,20 Apr 2009 23:15:11 +0800</pubDate>
+			<guid>http://www.panzhishi.com/classyk/default.asp?id=97</guid>
+		<description><![CDATA[<p>&nbsp;&nbsp;&nbsp; 以前就想过delay load可以用来做一些偷懒工作，不过却一直没啥机会使用，真到可用之处，却忘了这个东西。</p>
+<p>&nbsp;&nbsp;&nbsp; 昨晚突然想起来<img alt="" src="http://www.panzhishi.com/classyk/fckeditor/editor/images/smiley/qq2007/6.gif" />，我可以用这个功能来根据配置文件加载不同的摄像头sdk，今天在touchwin的代码上进行了试验，结果就是： 可行。</p>
+<p>&nbsp;&nbsp;&nbsp; 这样也蛮不错，以后维护后台的时候，可以少维护2个版本了。</p>
+<p>&nbsp;&nbsp;&nbsp; 而且，我不需要改动任何代码，仅仅只是修改了一下link选项<img alt="" src="http://www.panzhishi.com/classyk/fckeditor/editor/images/smiley/qq2007/13.gif" /></p>]]></description>
+		</item>
+		
+			<item>
+			<link>http://www.panzhishi.com/classyk/article.asp?id=96</link>
+			<title><![CDATA[binfstream]]></title>
+			<author>classyk#vip.qq.com(ClassyK)</author>
+			<category><![CDATA[C/C++]]></category>
+			<pubDate>Mon,20 Apr 2009 22:59:38 +0800</pubDate>
+			<guid>http://www.panzhishi.com/classyk/default.asp?id=96</guid>
+		<description><![CDATA[<p>以前写了一个不知道放哪去了，就重写了一个:</p>
+<div class="codeText">
+<div class="codeHead">C++代码</div>
+<ol class="dp-cpp">
+    <li class="alt"><span><span>&nbsp;&nbsp;</span></span></li>
+    <li><span class="keyword">class</span><span>&nbsp;binfstream&nbsp;:&nbsp;</span><span class="keyword">public</span><span>&nbsp;std::fstream &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>{ &nbsp;&nbsp;</span></li>
+    <li><span class="keyword">public</span><span>: &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment">//&nbsp;一个比较丑陋的构造函数&nbsp;^_^ </span><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;binfstream(&nbsp;</span><span class="keyword">const</span><span>&nbsp;</span><span class="datatypes">char</span><span>*&nbsp;file_name,&nbsp;</span><span class="datatypes">int</span><span>&nbsp;open_mode&nbsp;=&nbsp;std::fstream::in) &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;std::fstream(file_name,&nbsp;open_mode&nbsp;|&nbsp;std::fstream::binary&nbsp;|&nbsp;(&nbsp;(open_mode&nbsp;&amp;&nbsp;std::fstream::out&nbsp;)&nbsp;==&nbsp;0&nbsp;?&nbsp;0&nbsp;:&nbsp;std::fstream::trunc)&nbsp;) &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;~binfstream() &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment">//&nbsp;input </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">template</span><span>&lt;</span><span class="keyword">typename</span><span>&nbsp;T&gt; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;binfstream&amp;&nbsp;operator&nbsp;&lt;&lt;&nbsp;(</span><span class="keyword">const</span><span>&nbsp;T&amp;&nbsp;t) &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;write(&nbsp;</span><span class="keyword">reinterpret_cast</span><span>&lt;</span><span class="keyword">const</span><span>&nbsp;</span><span class="datatypes">char</span><span>*&gt;(&amp;t),&nbsp;</span><span class="keyword">sizeof</span><span>&nbsp;T); &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">return</span><span>&nbsp;*</span><span class="keyword">this</span><span>; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;binfstream&amp;&nbsp;operator&nbsp;&lt;&lt;&nbsp;(&nbsp;</span><span class="keyword">const</span><span>&nbsp;</span><span class="datatypes">char</span><span>*&nbsp;t) &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;write(&nbsp;t,&nbsp;strlen(t)&nbsp;+&nbsp;1); &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">return</span><span>&nbsp;*</span><span class="keyword">this</span><span>; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;binfstream&amp;&nbsp;operator&nbsp;&lt;&lt;&nbsp;(&nbsp;</span><span class="keyword">const</span><span>&nbsp;std::string&nbsp;s) &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">return</span><span>&nbsp;operator&nbsp;&lt;&lt;&nbsp;(&nbsp;s.c_str()); &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment">//&nbsp;output </span><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">template</span><span>&lt;</span><span class="keyword">typename</span><span>&nbsp;T&gt; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;binfstream&amp;&nbsp;operator&nbsp;&gt;&gt;&nbsp;(T&amp;&nbsp;t) &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;read(&nbsp;</span><span class="keyword">reinterpret_cast</span><span>&lt;</span><span class="datatypes">char</span><span>*&gt;(&amp;t),&nbsp;</span><span class="keyword">sizeof</span><span>&nbsp;T); &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">return</span><span>&nbsp;*</span><span class="keyword">this</span><span>; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;binfstream&amp;&nbsp;operator&nbsp;&gt;&gt;&nbsp;(&nbsp;std::string&nbsp;&amp;str) &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="datatypes">char</span><span>&nbsp;cur_char; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">while</span><span>(&nbsp;read(&nbsp;&amp;cur_char,&nbsp;</span><span class="keyword">sizeof</span><span>&nbsp;cur_char&nbsp;)&nbsp;) &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">if</span><span>(&nbsp;cur_char&nbsp;==&nbsp;0)&nbsp;</span><span class="keyword">break</span><span>; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;str.push_back(&nbsp;cur_char); &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">return</span><span>&nbsp;*</span><span class="keyword">this</span><span>; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>};&nbsp;&nbsp;</span></li>
+</ol>
+</div>
+<p>使用自然是以简单为主:</p>
+<div class="codeText">
+<div class="codeHead">C++代码</div>
+<ol class="dp-cpp">
+    <li class="alt"><span><span class="preprocessor">#include&nbsp;&lt;iostream&gt; </span><span>&nbsp;&nbsp;</span></span></li>
+    <li><span class="preprocessor">#include&nbsp;&lt;fstream&gt; </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#include&nbsp;&lt;string&gt; </span><span>&nbsp;&nbsp;</span></li>
+    <li><span class="preprocessor">#include&nbsp;&quot;binfstream.h&quot; </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span class="datatypes">int</span><span>&nbsp;main(&nbsp;</span><span class="datatypes">int</span><span>&nbsp;argc,&nbsp;</span><span class="datatypes">char</span><span>*&nbsp;argv[]) &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>{ &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;binfstream&nbsp;f(&nbsp;</span><span class="string">&quot;d:\\log.txt&quot;</span><span>,&nbsp;std::fstream::in&nbsp;|&nbsp;std::fstream::out); &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;&lt;&nbsp;3&nbsp;&lt;&lt;&nbsp;std::string(</span><span class="string">&quot;hello&quot;</span><span>)&nbsp;&lt;&lt;&nbsp;</span><span class="string">&quot;world&quot;</span><span>&nbsp;&lt;&lt;&nbsp;1.133; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="datatypes">int</span><span>&nbsp;i; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;std::string&nbsp;s1; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;std::string&nbsp;s2; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="datatypes">double</span><span>&nbsp;d; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;f.seekp(&nbsp;std::fstream::beg); &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&gt;&gt;&nbsp;i&nbsp;&gt;&gt;&nbsp;s1&nbsp;&gt;&gt;&nbsp;s2&gt;&gt;&nbsp;d; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;std::cout&nbsp;&lt;&lt;&nbsp;i&nbsp;&lt;&lt;&nbsp;s1&nbsp;&lt;&lt;&nbsp;s2&nbsp;&lt;&lt;&nbsp;d; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">return</span><span>&nbsp;0; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>} &nbsp;&nbsp;</span></li>
+</ol>
+</div>
+<p>其中operator &lt;&lt; 和 &gt;&gt; 并没有写为友元，主要是因为我。。想 偷懒</p>]]></description>
+		</item>
+		
+			<item>
+			<link>http://www.panzhishi.com/classyk/article.asp?id=95</link>
+			<title><![CDATA[getline]]></title>
+			<author>classyk#vip.qq.com(ClassyK)</author>
+			<category><![CDATA[C/C++]]></category>
+			<pubDate>Wed,08 Apr 2009 17:15:49 +0800</pubDate>
+			<guid>http://www.panzhishi.com/classyk/default.asp?id=95</guid>
+		<description><![CDATA[<p>getline原来也可以用于做字符串分割，我太out了</p>
+<div class="codeText">
+<div class="codeHead">C++代码</div>
+<ol class="dp-cpp">
+    <li class="alt"><span><span>stringstream&nbsp;ss(&nbsp;input);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></span></li>
+    <li><span>string&nbsp;str;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="keyword">while</span><span>(&nbsp;!ss.eof())&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+    <li><span>{&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;getline(&nbsp;ss,&nbsp;str,&nbsp;</span><span class="string">','</span><span>);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;results.push_back(&nbsp;str);&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>}&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+    <li><span class="keyword">return</span><span>&nbsp;results.size();&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+</ol>
+</div>
+<p>&nbsp;</p>]]></description>
+		</item>
+		
+			<item>
+			<link>http://www.panzhishi.com/classyk/article.asp?id=94</link>
+			<title><![CDATA[cppe4x]]></title>
+			<author>classyk#vip.qq.com(ClassyK)</author>
+			<category><![CDATA[C/C++]]></category>
+			<pubDate>Thu,12 Mar 2009 21:06:36 +0800</pubDate>
+			<guid>http://www.panzhishi.com/classyk/default.asp?id=94</guid>
+		<description><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;源码已经上传到google code，以下是project链接 <a href="http://code.google.com/p/cppe4x"><span style="color: #ff6600">http://code.google.com/p/cppe4x</span></a>&nbsp;&nbsp;&nbsp;</p>
+<div class="codeText">
+<div class="codeHead">cppe4x简介:</div>
+<ol class="dp-xml">
+    <li class="alt"><span><span><font color="#5c5c5c">&nbsp;&nbsp;&nbsp; </font>cppe4x是一个简单的C++跨平台XML解析器，基于DOM和XPath方式实现，其目标是快速的构建xml应用。&nbsp; &nbsp;&nbsp;</span></span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;cppe4x非常适合快速的构建测试程序以及配置文件的读写。当前仅支持UTF8格式的XML文件。同时，cppe4x在Microsoft&nbsp;Windows平台下会自动进行utf8与ansi编码的双向转换。&nbsp; &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;cppe4x最初的目标是构建与ActionScript3?中的E4X语法类似的接口，但由于C++与AS3语法的巨大差异，目前的cppe4x无法完全实现该目标。尽管如此，cppe4x还是尽量的保持了操作的简洁和有效性。</span></li>
+</ol>
+</div>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;这个xml解析器的代码并不长，但是前前后后却花了好几个月的时间，结构也数次调整。也正因如此，方知一个库的构建，是如此的困难。现在，依然有很多不满意的地方。程序和文档的完善，尚需时日。</p>]]></description>
+		</item>
+		
+			<item>
+			<link>http://www.panzhishi.com/classyk/article.asp?id=89</link>
+			<title><![CDATA[vs环境下，CreateProcess]]></title>
+			<author>classyk#vip.qq.com(ClassyK)</author>
+			<category><![CDATA[C/C++]]></category>
+			<pubDate>Sun,08 Mar 2009 22:23:22 +0800</pubDate>
+			<guid>http://www.panzhishi.com/classyk/default.asp?id=89</guid>
+		<description><![CDATA[<p>&nbsp;&nbsp;&nbsp; 前几天完成了之前挂起来的一个半截子程序，其中有个功能是拦截console的输出并显示。在vc环境下运行程序（无论是Debug还是直接Run)，一切正常。但是单独去运行，他就失败了，拦截不了console的输出。</p>
+<p>&nbsp;&nbsp;&nbsp; 查了半天也没查到问题所在，开始我想，会不会是vs下给了进程debug权限？于是我又写了代码把程序提高到了debug权限，结果很沮丧，问题依旧。</p>
+<p>&nbsp;&nbsp;&nbsp; 后来又查了半天，胡乱试了一试，结果问题解决了</p>
+<p>&nbsp;&nbsp;&nbsp; 原来这种情况下，CreateProcess要指定DETACHED_PROCESS参数。</p>]]></description>
+		</item>
+		
+			<item>
+			<link>http://www.panzhishi.com/classyk/article.asp?id=86</link>
+			<title><![CDATA[touchwin产品暂停开发]]></title>
+			<author>classyk#vip.qq.com(ClassyK)</author>
+			<category><![CDATA[C/C++]]></category>
+			<pubDate>Thu,05 Feb 2009 21:23:27 +0800</pubDate>
+			<guid>http://www.panzhishi.com/classyk/default.asp?id=86</guid>
+		<description><![CDATA[<p>&nbsp;&nbsp; 听同事说，touchwin暂停开发，现在全力做另外一个产品</p>
+<p>&nbsp;&nbsp; 过年前我还在忙着touchwin，结果呢，还没回公司，就说产品暂停了，或者说得好听点，这是个长期项目，随时要捡起来的。</p>
+<p>&nbsp;&nbsp;&nbsp; disappointted</p>]]></description>
+		</item>
+		
+			<item>
+			<link>http://www.panzhishi.com/classyk/article.asp?id=85</link>
+			<title><![CDATA[宏与namespace]]></title>
+			<author>classyk#vip.qq.com(ClassyK)</author>
+			<category><![CDATA[C/C++]]></category>
+			<pubDate>Tue,20 Jan 2009 09:58:08 +0800</pubDate>
+			<guid>http://www.panzhishi.com/classyk/default.asp?id=85</guid>
+		<description><![CDATA[<p>刚发现的，namespace并不能限制宏的作用域。&nbsp;</p>
+<div class="codeText">
+<div class="codeHead">C++代码</div>
+<ol class="dp-cpp">
+    <li class="alt"><span><span class="keyword">namespace</span><span>&nbsp;aaa &nbsp;&nbsp;</span></span></li>
+    <li><span>{ &nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="preprocessor">#define&nbsp;BBB&nbsp;int&nbsp;x; </span><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="datatypes">int</span><span>&nbsp;b(){&nbsp;</span><span class="keyword">return</span><span>&nbsp;0;}; &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>} &nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span class="datatypes">int</span><span>&nbsp;main(&nbsp;</span><span class="datatypes">int</span><span>&nbsp;,&nbsp;</span><span class="datatypes">char</span><span>*[]) &nbsp;&nbsp;</span></li>
+    <li><span>{ &nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;BBB;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment">//ok </span><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;aaa::b();&nbsp;&nbsp;</span><span class="comment">//ok </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;b();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment">//failure </span><span>&nbsp;&nbsp;</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;aaa::BBB;&nbsp;&nbsp;</span><span class="comment">//failure </span><span>&nbsp;&nbsp;</span></li>
+    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="keyword">return</span><span>&nbsp;0; &nbsp;&nbsp;</span></li>
+    <li><span>}&nbsp;&nbsp;</span></li>
+</ol>
+</div>
+<p>&nbsp;</p>]]></description>
+		</item>
+		
+</channel>
+</rss>

@@ -45,6 +45,8 @@ namespace E4X
 		void removeAllChild();
 		void removeAllChildElement();
 
+		void removeFromParent();
+
 		// ÔËËã·ûÖØÔØ
 		E4XIterator operator/(const std::string& strChildName);
 		E4XIterator operator[](const std::string& strChildName);

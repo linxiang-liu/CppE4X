@@ -94,14 +94,14 @@ namespace E4X
 
 	void E4XIterator::remove()
 	{
-		E4XCell *pCell = *m_itCurrent;
+		E4XIterator it( *this);
+		while( it.hasNext())
+		{
+			it.next().removeFromParent();
+		}
 
-		//if( hasNext())
-		//	next();
-
-		m_pCell->m_lstCell.remove( pCell);
-		delete pCell;
-
+		m_itCurrent = m_pCell->m_lstCell.end();
+		m_itNext = m_pCell->m_lstCell.end();
 		return;
 	}
 

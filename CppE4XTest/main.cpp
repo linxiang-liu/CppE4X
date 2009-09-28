@@ -3,80 +3,61 @@
 
 using namespace E4X;
 
+
 void test_read_write_file()
 {
+	std::cout << "---------------------" << __FUNCTION__ << std::endl;
 	E4XDocument doc;
 	if( doc.loadFile("sample.xml"))
 	{
-		std::cout<< doc["#xml"]["@encoding"].toString()<< std::endl;
-		E4XDocumentRef pDoc = doc.copy();
-		E4XCellRef pCellExec = pDoc["exec"].getCell().copy();
+		E4XCellRef refImage = doc["rss"]["channel"];
+		std::cout << "title: " << refImage["title"].toString() << std::endl;
+		std::cout << "link: " << refImage["link"].toString() << std::endl;
+		std::cout << "description: " << refImage["description"].toString() << std::endl;
 
-		doc["exec"]["@hehe"] = std::string("hexhe");
-
-		doc["exec"]["@attrib"]="hehe";
-		
-		pCellExec/"item"/1/"@hello" = "exec_value";
-
-		E4XIterator it = doc["exec"]["item"]["minipic"];
-		std::cout<< it[0].toString() << std::endl;
-
-		try
+		E4XCellRef channel = doc["rss"]["channel"][0].copy();
+		E4XIterator items = doc["rss"]["channel"]["item"];
+		while( items.hasNext())
 		{
-			doc["exec"]["item"][17]["minipic"] = std::string("minipic_new");
-		}
-		catch( E4XException& e)
-		{
-			std::cout << e.Error() << std::endl;
+			E4XCellRef cell = items.next();
+			cell["description"].remove();
+			// or items.next()["description"].getCell().removeFromParent();
+			std::cout << cell["title"].toString() << std::endl;
 		}
 
-		E4XIterator itnew( doc["exec"]);
+		doc["rss"][0].appendChild( channel);
 
-		itnew["heihei"]["hoho"]["@haha"]= true;
-		
-		itnew/"heihei"/"hoho"/"heihei" = "heihei!!";
-
-		std::cout << (itnew/"heihei"/"hoho"/"heihei").toXmlString() << std::endl;
-
-		E4XIterator itremove( doc["exec"]["item"]);
-		std::cout << itremove.toAnsiXmlString() << std::endl;
-
-		while( itremove.hasNext())
-		{
-			itremove.next();
-			itremove.remove();
-		}
-
-		itremove.getCell().appendChild( &pCellExec);
-
-		doc.saveFile( "output.xml");
-
-		pDoc.destroy();
+		doc.saveFile("sample_output.xml");
+	}
+	else
+	{
+		std::cout << "parser file error." << std::endl;
 	}
 }
 
-
 void test_create_new_file()
 {
+	std::cout << "---------------------" << __FUNCTION__ << std::endl;
 	E4XDocument doc;
-	doc["root"]["item"]["@type"]="attribute";
-	doc["root"]["item"][1]["@type"]="attribute_1";
-	E4XIterator it( doc);
-	std::cout << it.toXmlString() << std::endl;
+	doc["root"]["item"]["@type"]="fist";
+	doc["root"]["item"][1]["@type"]="second";
+	for( int i = 0; i< 10; i++)
+	{
+		doc["root"]["item"][i%2]["data"][i/2] = i;
+	}
+	doc.saveFile( "create_test.xml");
 }
 
 void test_parse()
 {
-	E4XElement element;
-	element.parseAnsi("<hehe xx=\"heihei\'ha²âÊÔÖÐÎÄ×Ö·û´®h&amp;a\'hoho\"   ></hehe>");
-	
-	E4XElement in("<invoke name=\"PlayMovie\" returntype=\"xml\"><arguments /></invoke>");
+	std::cout << "---------------------" << __FUNCTION__ << std::endl;
 
-	std::cout << element.toAnsiXmlString() << std::endl;
+	E4XElement element("<invoke name=\"PlayMovie\" returntype=\"xml\"><arguments ><string>here is a string</string></arguments></invoke>");
 
-	std::cout << in["arguments"].toXmlString() << std::endl;
-	std::cout << in["@name"].toXmlString() << std::endl;
-	std::cout << in.toXmlString() << std::endl;
+	std::cout << element["@name"].toString() << std::endl;
+
+	std::cout << element["arguments"].toXmlString() << std::endl;
+	std::cout << element["arguments"]["string"].toString() << std::endl;
 }
 
 
@@ -90,8 +71,6 @@ int main(int /*argc*/, char* /*argv*/[])
 	__tmpFlag |= _CRTDBG_LEAK_CHECK_DF;
 
 	_CrtSetDbgFlag( __tmpFlag );
-
-	//_CrtSetBreakAlloc(647); 
 
 #endif
 	test_parse();

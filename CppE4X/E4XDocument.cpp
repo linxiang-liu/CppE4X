@@ -76,8 +76,10 @@ namespace E4X
 
 	bool E4XDocument::loadFile( const char* xmlfile)
 	{
-		m_strName = xmlfile;
-		std::ifstream file( xmlfile, std::ios::in);
+		if( xmlfile != 0)	m_strName = xmlfile;
+		if( m_strName.length() == 0) return false;
+
+		std::ifstream file( m_strName.c_str(), std::ios::in);
 		if( !file) return false;
 		std::istreambuf_iterator<char> iter(file);
 		std::string readString( iter, (std::istreambuf_iterator<char>()));
