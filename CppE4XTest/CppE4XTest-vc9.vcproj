@@ -193,6 +193,7 @@
 				EnableIntrinsicFunctions="true"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
 				RuntimeLibrary="0"
+				BufferSecurityCheck="false"
 				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
