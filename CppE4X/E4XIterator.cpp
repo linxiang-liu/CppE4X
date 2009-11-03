@@ -245,6 +245,11 @@ namespace E4X
 		return getCell().toNumber();
 	}
 
+	__int64 E4XIterator::toBigNumber()
+	{
+		return getCell().toBigNumber();
+	}
+
 	bool E4XIterator::toBoolean()
 	{
 		return getCell().toBoolean();

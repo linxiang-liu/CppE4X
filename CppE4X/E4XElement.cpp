@@ -219,6 +219,7 @@ namespace E4X
 
 	const std::string E4XElement::getValue()
 	{
+		m_strValue.clear();
 		E4XIterator it(*this, std::string());
 
 		while( it.hasNext())

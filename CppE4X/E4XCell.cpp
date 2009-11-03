@@ -206,6 +206,11 @@ namespace E4X
 		return atoi( getValue().c_str());
 	}
 
+	__int64 E4XCell::toBigNumber()
+	{
+		return _atoi64( getValue().c_str());
+	}
+
 	double E4XCell::toFloat()
 	{
 		return atof( getValue().c_str());
