@@ -58,7 +58,7 @@ namespace E4X
 		return *(*m_itCurrent);
 	}
 
-	std::list< E4XCell*>::iterator E4XIterator::nearest(std::list< E4XCell*>::iterator it)
+	std::list< E4XCell*>::iterator E4XIterator::nearest(CELL_LIST::iterator it)
 	{
 		if( m_strName.length() != 0)
 		{
@@ -165,7 +165,7 @@ namespace E4X
 				return m_nCount;
 			}
 
-			for( std::list< E4XCell*>::iterator it = m_pCell->m_lstCell.begin(); it != m_pCell->m_lstCell.end(); it++)
+			for( CELL_LIST::iterator it = m_pCell->m_lstCell.begin(); it != m_pCell->m_lstCell.end(); it++)
 			{
 				if( (*it)->m_strName == m_strName)
 				{

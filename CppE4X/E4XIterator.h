@@ -55,15 +55,15 @@ namespace E4X
 		void initInternalIterator();
 		E4XCell& generalASubCell();
 
-		std::list< E4XCell*>::iterator nearest(std::list< E4XCell*>::iterator it);
+		CELL_LIST::iterator nearest(CELL_LIST::iterator it);
 
 	private:
 		E4XCell* m_pCell;
 		E4XCell* m_pSubCell;
 		int m_nCount;
 		/*const*/ std::string m_strName;
-		std::list< E4XCell*>::iterator m_itCurrent;
-		std::list< E4XCell*>::iterator m_itNext;
+		CELL_LIST::iterator m_itCurrent;
+		CELL_LIST::iterator m_itNext;
 	};
 
 }  // namespace

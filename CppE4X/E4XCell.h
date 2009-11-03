@@ -81,6 +81,8 @@ namespace E4X
 		double toFloat();
 		const std::string toString();
 
+		CELL_LIST& getChildCells();
+
 	protected:
 		const char* skipWhiteSpace(const char* pszIn);
 		const char* skipValueChars(const char* pszIn);
@@ -93,7 +95,7 @@ namespace E4X
 	protected:
 		std::string m_strName;
 		std::string m_strValue;
-		std::list< E4XCell*> m_lstCell;
+		CELL_LIST m_lstCell;
 		E4X_TYPE m_nType;
 		E4XCell* m_pParent;
 

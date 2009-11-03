@@ -19,7 +19,7 @@ namespace E4X
 
 	void E4XCell::removeAllChild()
 	{
-		std::list< E4XCell*>::iterator it;
+		CELL_LIST::iterator it;
 		for( it = m_lstCell.begin(); it != m_lstCell.end(); it++)
 		{
 			delete *it;
@@ -30,8 +30,8 @@ namespace E4X
 
 	void E4XCell::removeAllChildElement()
 	{
-		std::list< E4XCell*>::iterator it = m_lstCell.begin();
-		std::list< E4XCell*>::iterator itTemp = it;
+		CELL_LIST::iterator it = m_lstCell.begin();
+		CELL_LIST::iterator itTemp = it;
 		while( it != m_lstCell.end())
 		{
 			itTemp = it;
@@ -105,6 +105,11 @@ namespace E4X
 		pCell->m_pParent = this;
 	}
 
+	CELL_LIST& E4XCell::getChildCells()
+	{
+		return m_lstCell;
+	}
+
 	void E4XCell::prependChild( E4XCell& cell)
 	{
 		prependChild( &cell);
@@ -140,7 +145,7 @@ namespace E4X
 
 	bool E4XCell::removeChild( E4XCell* pCell)
 	{
-		std::list< E4XCell*>::iterator it = std::find(m_lstCell.begin(), m_lstCell.end(), pCell);
+		CELL_LIST::iterator it = std::find(m_lstCell.begin(), m_lstCell.end(), pCell);
 		if( it != m_lstCell.end())
 		{
 			delete pCell;

@@ -151,7 +151,7 @@ namespace E4X
 		strXml += ("<" + m_strName);
 		int nSubIndent = (nIndent == -1? nIndent : (nIndent + 1) );
 
-		std::list< E4XCell*>::iterator it;
+		CELL_LIST::iterator it;
 		int nAttribCount = 0;
 
 		E4XIterator itAttribute( *this, std::string());

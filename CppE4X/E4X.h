@@ -16,6 +16,14 @@
 #include <stdio.h>
 
 // e4x
+
+namespace E4X
+{
+	class E4XCell;
+	typedef std::list< E4XCell*> CELL_LIST;
+};
+
+
 #include "E4XType.h"
 #include "E4XException.h"
 #include "E4XCell.h"
@@ -39,3 +47,5 @@ namespace E4X
 	typedef E4XDocument& E4XDocumentRef;
 	typedef E4XText&	E4XTextRef;
 };
+
+
