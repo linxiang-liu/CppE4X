@@ -11,7 +11,7 @@ namespace E4X
 
 	E4XText::E4XText(const std::string& strValue) : E4XCell( E4X_TEXT)
 	{
-		parse( strValue.c_str());
+		setValue( strValue);
 	}
 
 	E4XText::~E4XText(void)
