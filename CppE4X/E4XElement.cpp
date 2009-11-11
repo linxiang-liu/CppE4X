@@ -9,14 +9,7 @@ namespace E4X
 
 	E4XElement::E4XElement(const std::string& strName) : E4XCell( E4X_ELEMENT)
 	{
-		const char* pData = skipWhiteSpace( strName.c_str());
-		if( pData != 0)
-		{
-			if( *pData=='<')
-				parse( pData);
-			else
-				m_strName = strName;
-		}
+		m_strName = strName;
 	}
 
 	E4XElement::~E4XElement(void)

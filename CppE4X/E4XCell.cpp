@@ -276,7 +276,7 @@ namespace E4X
 		m_strValue = e4x_a2utf8(value);
 		if( type() == E4X_ELEMENT)
 		{
-			E4XCell* cell= new E4XText( m_strValue);
+			E4XCell* cell= new E4XText( value);
 			this->appendChild( cell);
 		}
 		return *this;

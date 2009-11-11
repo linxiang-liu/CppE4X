@@ -52,7 +52,8 @@ void test_parse()
 {
 	std::cout << "---------------------" << __FUNCTION__ << std::endl;
 
-	E4XElement element("<invoke name=\"PlayMovie\" returntype=\"xml\"><arguments ><string>here is a string</string></arguments></invoke>");
+	E4XElement element;
+	element.parse("<invoke name=\"PlayMovie\" returntype=\"xml\"><arguments ><string>here is a string</string></arguments></invoke>");
 
 	std::cout << element["@name"].toString() << std::endl;
 
