@@ -21,6 +21,7 @@ namespace E4X
 		bool bLeft = false;
 		assert( *xmldata == '<');
 		const char* pNewPos = skipWhiteSpace( xmldata + 1);
+		if ( pNewPos == 0) return 0;
 		const char* pName = skipValueChars( pNewPos);
 		if( pName == 0) return 0;
 
