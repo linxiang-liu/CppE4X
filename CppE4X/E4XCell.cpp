@@ -231,11 +231,6 @@ namespace E4X
 		return getValue()=="true" || getValue()=="yes";
 	}
 
-	E4XCell& E4XCell::operator = ( const E4XCell& cell)
-	{
-		return const_cast<E4XCell&>(cell);
-	}
-
 	//E4XCell& E4XCell::operator = ( const char* strName)
 	//{
 	//	std::string str( strName);
@@ -324,7 +319,12 @@ namespace E4X
 
 			end = strchr( pos, ';');
 			if( end == 0)
-				throw( E4XException( E4XException::ERROR_INVALID_TEXT));
+			{
+				//throw( E4XException( E4XException::ERROR_INVALID_TEXT));
+				out.push_back( *pos);
+				++pos;
+				continue;
+			}
 
 			tmp = pos + 1;
 			pos = end + 1;

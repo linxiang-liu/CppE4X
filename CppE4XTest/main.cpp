@@ -53,12 +53,38 @@ void test_parse()
 	std::cout << "---------------------" << __FUNCTION__ << std::endl;
 
 	E4XElement element;
-	element.parse("<invoke name=\"PlayMovie\" returntype=\"xml\"><arguments ><string>here is a string</string></arguments></invoke>");
+	if( element.parse("<invoke name=\"PlayMovie\" returntype=\"xml\"><arguments ><string>here is a string</string></arguments></invoke>"))
+	{
+		std::cout << element["@name"].toString() << std::endl;
 
-	std::cout << element["@name"].toString() << std::endl;
+		std::cout << element["arguments"].toXmlString() << std::endl;
+		std::cout << element["arguments"]["string"].toString() << std::endl;
 
-	std::cout << element["arguments"].toXmlString() << std::endl;
-	std::cout << element["arguments"]["string"].toString() << std::endl;
+		E4X::E4XIterator it = element["arguments"][""];
+		while( it.hasNext())
+		{
+			E4X::E4XCellRef cell = it.next();
+			std::cout << cell.getName() << std::endl;
+		}
+	}
+	else
+	{
+		std::cout << "parse 1 error" << std::endl;
+	}
+
+
+
+	E4XElement http;
+	if( http.parseAnsi("<http_xml_request http=\"http://dy.gougou.com/top_movie?key=¹¦·ò&num=12&t=200\" />"))
+	{
+		std::cout << http["@http"].toString() << std::endl;
+		std::cout << http.toAnsiXmlString() << std::endl;
+	}
+	else
+	{
+		std::cout << "parse 2 error" << std::endl;
+	}
+
 }
 
 

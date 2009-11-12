@@ -101,6 +101,7 @@ namespace E4X
 
 	private:	// ½ûÖ¹µÄÔËËã·ûÖØÔØ
 		E4XCell& operator = ( const E4XCell& cell);
+		E4XCell& operator = ( E4XCell& cell);
 
 	};
 
