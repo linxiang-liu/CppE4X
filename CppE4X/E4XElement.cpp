@@ -18,6 +18,11 @@ namespace E4X
 
 	const char* E4XElement::parse( const char* xmldata)
 	{
+		if( xmldata==0 || *xmldata == 0)
+		{
+			return 0;
+		}
+
 		bool bLeft = false;
 		assert( *xmldata == '<');
 		const char* pNewPos = skipWhiteSpace( xmldata + 1);
