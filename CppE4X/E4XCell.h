@@ -3,7 +3,6 @@
 
 namespace E4X
 {
-	class E4XText;
 	class E4XIterator;
 
 	class E4XCell
@@ -52,18 +51,7 @@ namespace E4X
 		E4XIterator operator[](const std::string& strChildName);
 		
 		template<typename T>
-		E4XCell& operator = ( T& t)
-		{
-			std::stringstream stream;
-			stream << t;
-			stream >> m_strValue;
-			if( type() == E4X_ELEMENT)
-			{
-				E4XCell* cell= new E4XText( m_strValue);
-				this->appendChild( cell);
-			}
-			return *this;
-		};
+		E4XCell& operator = ( T& t);
 
 		E4XCell& operator = ( const char* strName);
 		E4XCell& operator = ( char* strName);
@@ -76,7 +64,7 @@ namespace E4X
 		// ÀàÐÍ×ª»»
 		//operator E4XIterator();
 		int toNumber();
-		__int64 toBigNumber();
+		long long toBigNumber();
 		bool toBoolean();
 		double toFloat();
 		const std::string toString();

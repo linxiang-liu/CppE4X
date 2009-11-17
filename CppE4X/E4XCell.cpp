@@ -1,7 +1,8 @@
-#include <sstream>
-#include <iomanip>
 #include "E4X.h"
 #include "E4XCharSet.h"
+#include <sstream>
+#include <iomanip>
+#include <cassert>
 
 namespace E4X
 {
@@ -211,9 +212,13 @@ namespace E4X
 		return atoi( getValue().c_str());
 	}
 
-	__int64 E4XCell::toBigNumber()
+	long long E4XCell::toBigNumber()
 	{
+#ifdef WIN32
 		return _atoi64( getValue().c_str());
+#else
+		return atoll( getValue().c_str());
+#endif
 	}
 
 	double E4XCell::toFloat()

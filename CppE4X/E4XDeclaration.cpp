@@ -1,4 +1,5 @@
 #include "E4X.h"
+#include <cassert>
 
 namespace E4X
 {

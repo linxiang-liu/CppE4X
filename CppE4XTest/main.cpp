@@ -1,5 +1,6 @@
 
 #include "../CppE4X/E4X.h"
+#include <iostream>
 
 using namespace E4X;
 
@@ -106,8 +107,8 @@ int main(int /*argc*/, char* /*argv*/[])
 
 
 	E4XDocument doc;
-	doc["root"]["data"] = __int64( 12345678987621);
-	__int64 data = doc["root"]["data"].toBigNumber();
+	doc["root"]["data"] = 12345678987621LL;
+	long long data = doc["root"]["data"].toBigNumber();
 
 	std::cout << doc.toXmlString() << std::endl;
 	std::cout << data << std::endl;

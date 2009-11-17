@@ -1,4 +1,6 @@
 #include "E4X.h"
+#include <fstream>
+#include <cassert>
 
 namespace E4X
 {

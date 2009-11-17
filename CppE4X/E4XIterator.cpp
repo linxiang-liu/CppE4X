@@ -1,5 +1,6 @@
 #include "E4X.h"
 #include "E4XCharSet.h"
+#include <cassert>
 
 namespace E4X
 {
@@ -245,7 +246,7 @@ namespace E4X
 		return getCell().toNumber();
 	}
 
-	__int64 E4XIterator::toBigNumber()
+	long long E4XIterator::toBigNumber()
 	{
 		return getCell().toBigNumber();
 	}

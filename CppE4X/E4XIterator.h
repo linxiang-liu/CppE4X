@@ -41,7 +41,7 @@ namespace E4X
 
 		// 实现E4XCell的一部分方法
 		int toNumber();
-		__int64 toBigNumber();
+		long long toBigNumber();
 		bool toBoolean();
 		double toFloat();
 		const std::string toString();
