@@ -31,6 +31,7 @@ namespace E4X
 		const char* pName = skipValueChars( pNewPos);
 		if( pName == 0) return 0;
 
+		m_strName.clear();
 		std::copy( pNewPos, pName, std::back_inserter(m_strName));
 
 		pNewPos = pName;
