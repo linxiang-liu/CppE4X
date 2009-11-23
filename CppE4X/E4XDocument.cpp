@@ -131,7 +131,11 @@ namespace E4X
 			xmlfile = m_strName.c_str();
 		}
 
+		std::locale local = std::locale::global( std::locale(""));
+
 		std::ofstream file( xmlfile, std::ios::out);
+
+		std::locale::global( local);
 
 		std::string strXmlString;
 		toXmlStringInternal( strXmlString, 0);
