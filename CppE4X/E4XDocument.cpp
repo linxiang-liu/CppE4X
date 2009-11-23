@@ -81,7 +81,12 @@ namespace E4X
 		if( xmlfile != 0)	m_strName = xmlfile;
 		if( m_strName.length() == 0) return false;
 
+		std::locale local = std::locale::global( std::locale(""));
+
 		std::ifstream file( m_strName.c_str(), std::ios::in);
+
+		std::locale::global( local);
+
 		if( !file) return false;
 		std::istreambuf_iterator<char> iter(file);
 		std::string readString( iter, (std::istreambuf_iterator<char>()));
