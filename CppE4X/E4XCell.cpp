@@ -273,12 +273,7 @@ namespace E4X
 
 	E4XCell& E4XCell::operator = ( const std::string& value)
 	{
-		m_strValue = e4x_a2utf8(value);
-		if( type() == E4X_ELEMENT)
-		{
-			E4XCell* cell= new E4XText( value);
-			this->appendChild( cell);
-		}
+		setValue( value);
 		return *this;
 	}
 
