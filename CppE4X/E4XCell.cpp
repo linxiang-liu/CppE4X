@@ -252,11 +252,7 @@ namespace E4X
 	{
 		m_strValue = bFlag? "true":"false";
 
-		if( type() == E4X_ELEMENT)
-		{
-			E4XCell* cell= new E4XText( m_strValue);
-			this->appendChild( cell);
-		}
+		setValue( m_strValue);
 
 		return *this;
 	}
