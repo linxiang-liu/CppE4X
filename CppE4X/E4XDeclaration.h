@@ -1,3 +1,9 @@
+/// @brief E4XDeclaration Header File.
+/// @author Linxiang Liu
+/// @version 2.1
+/// @date    2008-2009
+///
+
 #pragma once
 
 namespace E4X

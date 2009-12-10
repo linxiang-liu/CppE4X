@@ -82,7 +82,7 @@ namespace E4X
 		return 0;
 	}
 
-	int E4XCell::type()
+	E4X_TYPE E4XCell::type()
 	{
 		return m_nType;
 	}

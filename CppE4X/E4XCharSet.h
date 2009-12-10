@@ -1,4 +1,8 @@
-
+/// @brief E4XCharSet Header File.
+/// @author Linxiang Liu
+/// @version 2.1
+/// @date    2008-2009
+///
 
 #ifdef WIN32
 
