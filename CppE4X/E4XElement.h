@@ -8,12 +8,15 @@
 
 namespace E4X
 {
+	/// xml element node
 
 	class E4XElement :
 		public E4XCell
 	{
 	public:
 		E4XElement(void);
+
+		/// constructor with element name
 		E4XElement(const std::string& strName);
 		virtual ~E4XElement(void);
 

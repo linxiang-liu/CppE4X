@@ -379,6 +379,10 @@
 				RelativePath=".\E4XCellTemplate.h"
 				>
 			</File>
+			<File
+				RelativePath=".\E4XIteratorTemplate.h"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>

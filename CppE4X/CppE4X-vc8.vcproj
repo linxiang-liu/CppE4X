@@ -318,10 +318,6 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\config.h"
-				>
-			</File>
-			<File
 				RelativePath=".\E4X.h"
 				>
 			</File>
@@ -381,6 +377,10 @@
 			>
 			<File
 				RelativePath=".\E4XCellTemplate.h"
+				>
+			</File>
+			<File
+				RelativePath=".\E4XIteratorTemplate.h"
 				>
 			</File>
 		</Filter>

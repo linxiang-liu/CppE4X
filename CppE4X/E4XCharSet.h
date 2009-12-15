@@ -11,6 +11,10 @@
 
 namespace E4X
 {
+	/// @brief 将wide char字符串转换为ansi字符串
+	///	@param	pwcsSrc	源wide char字符串
+	/// @param	codepage	使用的代码页
+	/// @retval	转换完成后的ansi字符串
 	inline std::string _w2a( const std::wstring& pwcsSrc, int codepage)
 	{
 		char* _lin_dst = 0;
@@ -33,6 +37,10 @@ namespace E4X
 		return result;
 	}
 
+	/// @brief 将ansi字符串转换为wide char字符串
+	///	@param	pszSrc	源ansi字符串
+	/// @param	codepage	使用的代码页
+	/// @retval	转换完成后的wide char字符串
 	inline std::wstring _a2w( const std::string& pszSrc, int codepage)
 	{
 		wchar_t* _lin_wdst = 0;
@@ -55,24 +63,17 @@ namespace E4X
 		return result;
 	}
 };
-//#define _utf82w( pszSrc) E4X::_a2w( pszSrc, CP_UTF8)
-//#define _w2utf8( pszSrc) E4X::_w2a( pszSrc, CP_UTF8)
-//
-//#define _utf82w( pszSrc) E4X::_a2w( pszSrc, CP_UTF8)
-//#define _w2utf8( pszSrc) E4X::_w2a( pszSrc, CP_UTF8)
-//
-//
-//	// 导出的宏
-//#define a2w(pszSrc) _a2w(pszSrc, CP_ACP)
-//#define w2a(tcsSrc) _w2a(tcsSrc, CP_ACP)
-//
-//#define w2utf8(wcsSrc) _w2utf8(wcsSrc)
-//#define utf82w(pszSrc) _utf82w(pszSrc)
 
+///	@brief将ansi字符串 转换为 utf-8字符串
+/// @note only used in windows system
 #define e4x_a2utf8(pszSrc)  (E4X::_w2a( E4X::_a2w((pszSrc), CP_ACP), CP_UTF8))
+/// @brief将utf-8字符串转换为ansi字符串
+/// @note only used in windows system
 #define e4x_utf82a(pszSrc)  (E4X::_w2a( E4X::_a2w((pszSrc), CP_UTF8), CP_ACP))
 
 #else
+/// @brief faked macro in linux
 #define e4x_a2utf8( pszSrc) (std::string(pszSrc))
+/// @brief faked macro in linux
 #define e4x_utf82a( pszSrc) (std::string(pszSrc))
 #endif

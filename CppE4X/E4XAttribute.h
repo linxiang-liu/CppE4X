@@ -26,19 +26,14 @@ namespace E4X
 		/// Destuctor
 		virtual ~E4XAttribute(void);
 
-		/// @brief parser a utf-8 string
-		/// @param	xmldata 传入的字符串指针，包含一个xmldata
-		/// @retval	指向xmldata中完成parse后的下一个地址。该地址可用于其他节点的parse
-		///	@retval	0: parse失败。
 		const char* parse( const char* xmldata);
 
-		/// @brief	从当前E4XAttribute制作一份拷贝
 		virtual E4XAttribute& copy();
 
 	protected:
 		/// @brief 序列化到xml字符串
 		/// @param strXml	输入的字符串引用。序列化的后的字符串将附加到该串中。
-		/// @nIndent 缩进等级。没次缩进一个TAB
+		/// @param nIndent 缩进等级。每次缩进一个TAB
 		/// @return	strXml的引用
 		std::string& toXmlStringInternal( std::string& strXml, int nIndent);
 

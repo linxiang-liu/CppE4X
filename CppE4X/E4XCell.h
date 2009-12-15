@@ -46,25 +46,25 @@ namespace E4X
 
 		/// @brief 序列化到xml字符串
 		/// @param strXml	输入的字符串引用。序列化的后的字符串将附加到该串中。
-		/// @nIndent 缩进等级。每次缩进一个TAB
+		/// @param nIndent 缩进等级。每次缩进一个TAB
 		/// @return	strXml的引用
 		virtual std::string& toXmlStringInternal( std::string& strXml, int nIndent) = 0;
 
 
 		/// @brief	获取节点的name
-		/// @comment	对于E4XDocument,将返回xml文件名
+		/// @note	对于E4XDocument,将返回xml文件名
 		virtual const std::string getName();
 
 		/// @brief 获取节点的value
-		/// @comment 对于E4XElement,该函数返回其包含的E4XText节点的内容
+		/// @note 对于E4XElement,该函数返回其包含的E4XText节点的内容
 		virtual const std::string getValue();
 
 		/// @brief	设置节点的name
-		/// @comment	对于E4XDocument,将设置新的xml文件名。将在保存xml数据时使用。
+		/// @note	对于E4XDocument,将设置新的xml文件名。用于保存XML文件。
 		virtual void setName(const std::string& name);
 
 		/// @brief	设置节点value
-		/// @comment	对于E4XElement,将修改其包含的E4XText节点的内容。
+		/// @note	对于E4XElement,将修改其包含的E4XText节点的内容。
 		virtual void setValue(const std::string& value);
 
 		/// @brief	clone a E4XCell
@@ -196,11 +196,12 @@ namespace E4X
 
 		/// @brief	获取子节点类表
 		/// @warning	即将废止，请勿再使用。 如需枚举子节点，可使用 cell[""]来取代。
-		// TODO	废止该函数，可以使用 [""]来替代
+		/// @retval	E4XCell list array
+		/// @warning	废止该函数，可以使用 [""]+循环 来替代
 		CELL_LIST& getChildCells();
 
 	protected:
-		/// @brief 跳过字符串中的空白字符，如\b, \t 等
+		/// @brief 跳过字符串中的空白字符，如\\b, \\t 等
 		const char* skipWhiteSpace(const char* pszIn);
 
 		/// @brief 跳过字符串的非空白符
@@ -214,7 +215,8 @@ namespace E4X
 
 
 		/// @brief	检查是否到达尾部
-		/// @param nMinSize到达字符串结尾前，至少需要保留的字符处
+		///	@param pszBuffer	被检查的字符串
+		/// @param nMinSize 到达字符串结尾前，至少需要保留的字符处
 		/// @retval	true	还有足够剩余字符串
 		///	@retval	false	空间不足，后续操作需要注意可能边界溢出。
 		bool notEnd(const char* pszBuffer, int nMinSize);
@@ -230,10 +232,20 @@ namespace E4X
 		static std::string getXmlString(const char* src);
 
 	protected:
+
+		///	cell name
 		std::string m_strName;
+
+		/// cell value
 		std::string m_strValue;
+
+		/// list of subcell pointer
 		CELL_LIST m_lstCell;
+
+		/// type
 		E4X_TYPE m_nType;
+
+		/// parent node
 		E4XCell* m_pParent;
 
 	private:

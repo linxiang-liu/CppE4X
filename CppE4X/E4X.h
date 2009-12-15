@@ -34,6 +34,8 @@ namespace E4X
 	class E4XDeclaration;
 	class E4XComment;
 	class E4XIterator;
+
+	/// list of E4XCell Pointer
 	typedef std::list< E4XCell*> CELL_LIST;
 };
 
@@ -49,17 +51,26 @@ namespace E4X
 #include "E4XDocument.h"
 #include "E4XIterator.h"
 #include "E4XCellTemplate.h"
+#include "E4XIteratorTemplate.h"
 
 
 namespace E4X
 {
+	/// E4XException Ref
 	typedef E4XException& E4XExceptionRef;
+	/// E4XCell Ref
 	typedef E4XCell&	E4XCellRef;
+	/// E4XAttribute Ref
 	typedef E4XAttribute&	E4XAttributeRef;
+	/// E4XComment Ref
 	typedef E4XComment&	E4XCommentRef;
+	/// E4XDeclaration Ref
 	typedef E4XDeclaration&	E4XDeclarationRef;
+	/// E4XElement Ref
 	typedef E4XElement&	E4XElementRef;
+	/// E4XDocument Ref
 	typedef E4XDocument& E4XDocumentRef;
+	/// E4XText Ref
 	typedef E4XText&	E4XTextRef;
 };
 

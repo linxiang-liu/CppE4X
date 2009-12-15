@@ -9,6 +9,9 @@
 namespace E4X
 {
 
+	/// @brief xml declaration node
+	/// 只可能为E4XDocument的子节点,且只存在一份。
+
 	class E4XDeclaration :
 		public E4XCell
 	{
@@ -21,8 +24,11 @@ namespace E4X
 		const char* parse( const char* xmldata);
 
 	protected:
+		/// declaration node name: "#xml"
 		static const std::string m_pszDeclarationName;
+		/// declaration begin text: "<?xml"
 		static const std::string m_pszDeclarationBegin;
+		/// declaration begin text: "?>"
 		static const std::string m_pszDeclarationEnd;
 
 		std::string& toXmlStringInternal( std::string& strXml, int nIndent);

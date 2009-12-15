@@ -8,9 +8,12 @@
 
 namespace E4X
 {
+	/// cppe4x exception
 	class E4XException
 	{
 	public:
+
+		/// cppe4x exception code
 		enum E4XErrorCode
 		{
 			ERROR_UNKNOWN,
@@ -23,11 +26,19 @@ namespace E4X
 		};
 
 	public:
+		/// Default construct
+		/// @param ec	exception code
 		E4XException(E4XErrorCode ec = ERROR_UNKNOWN);
+
+		/// Destructor
 		~E4XException(void);
 
+		/// get cppe4x exception code
+		/// @retval	exception code
 		int errorCode();
 
+		/// get cppe4x exception error text
+		/// @retval error description
 		const char* Error(void);
 
 	private:
