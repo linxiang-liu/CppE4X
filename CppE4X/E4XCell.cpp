@@ -295,6 +295,23 @@ namespace E4X
 		return E4XIterator( *this, strChildName);
 	}
 
+	bool E4XCell::getRealStringWithoutException(std::string& dst, const char* src)
+	{
+		bool bGet = true;
+
+		dst.clear();
+		try
+		{
+			dst = getRealString( src);
+		}
+		catch( E4X::E4XException& ex)
+		{
+			bGet = false;
+		}
+
+		return bGet;
+	}
+
 	std::string E4XCell::getRealString(const char* src)
 	{
 		/*

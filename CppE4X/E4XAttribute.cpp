@@ -53,7 +53,8 @@ namespace E4X
 
 		m_strValue.reserve( pNewPos - pValue);
 		std::copy( pValue+1, pNewPos, std::back_inserter(m_strValue));
-		m_strValue = getRealString( m_strValue.c_str());
+		bool bGet = getRealStringWithoutException( m_strValue, m_strValue.c_str());
+		if( !bGet) return 0;
 
 		return ++pNewPos;
 	}

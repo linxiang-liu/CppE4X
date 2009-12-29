@@ -43,7 +43,8 @@ namespace E4X
 
 		m_strValue.reserve( pEndPos - pStartPos);
 		std::copy( pStartPos, pEndPos, std::back_inserter( m_strValue));
-		m_strValue = getRealString(m_strValue.c_str());
+		bool bGet = getRealStringWithoutException( m_strValue, m_strValue.c_str());
+		if( !bGet) return 0;
 
 		return pEndPos + nEndSize;
 	}

@@ -55,7 +55,8 @@ namespace E4X
 
 		m_strValue.reserve( pNewPos - xmldata);
 		std::copy( xmldata, pNewPos, std::back_inserter(m_strValue));
-		m_strValue = getRealString(m_strValue.c_str());
+		bool bGet = getRealStringWithoutException( m_strValue, m_strValue.c_str());
+		if( !bGet) return 0;
 
 		return pNewPos;
 	}

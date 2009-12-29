@@ -224,7 +224,16 @@ namespace E4X
 		/// @brief	从已经转义的XML字符串数据中，获取转义前的字符串数据。
 		/// @param	src 已经转义的xml字符串。
 		/// @retval	转义前的原始字符串数据。
+		/// @warning 此函数可能产生E4XException异常
+		/// @see	getRealStringWithoutException;
 		static std::string getRealString(const char* src);
+
+		/// @brief	从已经转义的XML字符串数据中，获取转义前的字符串数据。
+		/// @param	out 转换成功时，输出转义前的原始字符串数据。
+		/// @param	src 已经转义的xml字符串。
+		/// @retval	是否成功完成转换。
+		/// @see	getRealString
+		static bool getRealStringWithoutException(std::string& out, const char* src);
 
 		/// @brief	从普通字符串，转义成为xml字符串格式。
 		/// @param	src 原始字符串数据。
