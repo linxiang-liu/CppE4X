@@ -35,13 +35,11 @@ namespace E4X
 		///	@brief	解析xml字符串
 		/// @param	xmldata	传入的字符串
 		/// @return	返回parse完成后的指针。成功parse后，该值将指向尚未parse的数据部分。 当返回0时，parse失败
-		/// @warning 该函数调用有可能导致产生E4XException异常。
 		virtual const char* parse( const char* xmldata) = 0;
 
 		/// @brief 解析ansi格式的xml字符串.
 		/// @param xmldata 传入的ansi格式字符串，该字符串与系统当前使用的默认编码相关。
 		/// @return	返回parse完成后的指针。成功parse后，该值将指向尚未parse的数据部分。 当返回0时，parse失败
-		/// @warning 该函数调用有可能导致产生E4XException异常。
 		const char* parseAnsi(const char* xmldata);
 
 		/// @brief 序列化到xml字符串
@@ -225,7 +223,7 @@ namespace E4X
 		/// @param	src 已经转义的xml字符串。
 		/// @retval	转义前的原始字符串数据。
 		/// @warning 此函数可能产生E4XException异常
-		/// @see	getRealStringWithoutException;
+		/// @see	getRealStringWithoutException
 		static std::string getRealString(const char* src);
 
 		/// @brief	从已经转义的XML字符串数据中，获取转义前的字符串数据。

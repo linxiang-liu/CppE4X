@@ -299,16 +299,17 @@ namespace E4X
 	{
 		bool bGet = true;
 
-		dst.clear();
+		std::string out;
 		try
 		{
-			dst = getRealString( src);
+			out = getRealString( src);
 		}
 		catch( E4X::E4XException& ex)
 		{
 			bGet = false;
 		}
 
+		dst = out;
 		return bGet;
 	}
 

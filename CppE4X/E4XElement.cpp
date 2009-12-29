@@ -118,6 +118,7 @@ namespace E4X
 											E4XText* pCell = new E4XText;
 											appendChild( pCell);
 											pNewPos = pCell->parse( pNew);
+											if( pNewPos == 0) return 0;
 										}
 										else
 											return 0;
@@ -138,6 +139,7 @@ namespace E4X
 							E4XText* pCell = new E4XText;
 							appendChild( pCell);
 							pNewPos = pCell->parse( pNewPos);
+							if( pNewPos == 0) return 0;
 							continue;
 						}
 					}
@@ -146,6 +148,7 @@ namespace E4X
 						E4XAttribute* pCell = new E4XAttribute;
 						appendChild( pCell);
 						pNewPos = pCell->parse( pNewPos);
+						if( pNewPos == 0) return 0;
 					}
 				}
 			}

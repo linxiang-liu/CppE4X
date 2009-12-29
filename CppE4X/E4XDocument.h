@@ -29,7 +29,6 @@ namespace E4X
 		/// load xml data from xml file
 		/// @param xmlfile	加载的xml文件的路径
 		/// @retval	true: 加载成功	false: 加载失败
-		/// @warning:	目前版本中，可能抛出E4XException异常。
 		bool loadFile( const char* xmlfile);
 
 		/// save xml data to xml file
