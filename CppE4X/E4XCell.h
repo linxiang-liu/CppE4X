@@ -200,12 +200,6 @@ namespace E4X
 		/// @brief	转换value为string类型
 		const std::string toString();
 
-		/// @brief	获取子节点类表
-		/// @warning	即将废止，请勿再使用。 如需枚举子节点，可使用 cell[""]来取代。
-		/// @retval	E4XCell list array
-		/// @warning	废止该函数，可以使用 [""]+循环 来替代
-		CELL_LIST& getChildCells();
-
 	protected:
 
 		///	@brief	解析xml字符串

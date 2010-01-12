@@ -113,11 +113,6 @@ namespace E4X
 		pCell->m_pParent = this;
 	}
 
-	CELL_LIST& E4XCell::getChildCells()
-	{
-		return m_lstCell;
-	}
-
 	void E4XCell::prependChild( E4XCell& cell)
 	{
 		prependChild( &cell);

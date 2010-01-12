@@ -73,7 +73,7 @@ namespace E4X
 			const char* pchName = m_strName.c_str();
 			if( pchName[0] == '@')	// attribute
 			{
-				std::string strAttribName = pchName + 1;
+				const char* strAttribName = pchName + 1;
 				while( it != m_pCell->m_lstCell.end())
 				{
 					if( (*it)->type()==E4X_ATTRIBUTE && (*it)->m_strName == strAttribName)
