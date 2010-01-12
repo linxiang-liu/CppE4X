@@ -24,7 +24,7 @@ namespace E4X
 	{
 	}
 
-	const char* E4XElement::parse( const char* xmldata)
+	const char* E4XElement::parseImp( const char* xmldata)
 	{
 		if( xmldata==0 || *xmldata == 0)
 		{
@@ -105,9 +105,9 @@ namespace E4X
 									if( memcmp( pNewPos-1, E4XComment::m_pszCommentBegin.c_str(), nCommentBeginSize) == 0)
 									{
 
-										E4XComment* pCell = new E4XComment;
+										E4XCell* pCell = new E4XComment;
 										appendChild( pCell);
-										pNewPos = pCell->parse( pNew);
+										pNewPos = pCell->parseImp( pNew);
 										if( pNewPos == 0) return 0;
 									}
 									else
@@ -115,9 +115,9 @@ namespace E4X
 										if( !notEnd( pTemp, nTextBeginSize)) return 0;
 										if( memcmp( pNewPos-1, E4XText::m_pszTextBegin.c_str(), nTextBeginSize) == 0)
 										{
-											E4XText* pCell = new E4XText;
+											E4XCell* pCell = new E4XText;
 											appendChild( pCell);
-											pNewPos = pCell->parse( pNew);
+											pNewPos = pCell->parseImp( pNew);
 											if( pNewPos == 0) return 0;
 										}
 										else
@@ -126,9 +126,9 @@ namespace E4X
 								}
 								else
 								{
-									E4XElement* pCell = new E4XElement;
+									E4XCell* pCell = new E4XElement;
 									appendChild( pCell);
-									pNewPos = pCell->parse( pNew);
+									pNewPos = pCell->parseImp( pNew);
 									if( pNewPos == 0) return 0;
 								}
 							}
@@ -136,18 +136,18 @@ namespace E4X
 						}
 						else
 						{
-							E4XText* pCell = new E4XText;
+							E4XCell* pCell = new E4XText;
 							appendChild( pCell);
-							pNewPos = pCell->parse( pNewPos);
+							pNewPos = pCell->parseImp( pNewPos);
 							if( pNewPos == 0) return 0;
 							continue;
 						}
 					}
 					else
 					{
-						E4XAttribute* pCell = new E4XAttribute;
+						E4XCell* pCell = new E4XAttribute;
 						appendChild( pCell);
-						pNewPos = pCell->parse( pNewPos);
+						pNewPos = pCell->parseImp( pNewPos);
 						if( pNewPos == 0) return 0;
 					}
 				}

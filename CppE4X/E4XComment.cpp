@@ -26,7 +26,7 @@ namespace E4X
 	{
 	}
 
-	const char* E4XComment::parse( const char* xmldata)
+	const char* E4XComment::parseImp( const char* xmldata)
 	{
 		int nBeginSize = m_pszCommentBegin.length();
 		int nEndSize = m_pszCommentEnd.length();

@@ -8,23 +8,17 @@
 #pragma once
 
 // stl
-//#include <iostream>
 #include <string>
 #include <sstream>
-//#include <fstream>
 #include <list>
 #include <algorithm>
-//#include <cassert>
 
 // c
 #ifndef WIN32
 #include <string.h>		// compatible with fedora
 #endif
 
-//#include <stdio.h>
-
 // e4x
-
 namespace E4X
 {
 	class E4XCell;

@@ -26,15 +26,12 @@ namespace E4X
 		/// Destuctor
 		virtual ~E4XAttribute(void);
 
-		const char* parse( const char* xmldata);
 
 		virtual E4XAttribute& copy();
 
 	protected:
-		/// @brief 序列化到xml字符串
-		/// @param strXml	输入的字符串引用。序列化的后的字符串将附加到该串中。
-		/// @param nIndent 缩进等级。每次缩进一个TAB
-		/// @return	strXml的引用
+		virtual const char* parseImp( const char* xmldata);
+
 		std::string& toXmlStringInternal( std::string& strXml, int nIndent);
 
 	private:

@@ -22,8 +22,9 @@ namespace E4X
 	{
 	}
 
-	const char* E4XAttribute::parse( const char* xmldata)
+	const char* E4XAttribute::parseImp( const char* xmldata)
 	{
+		removeAllChild();
 		const char* pNewPos = skipValueChars( xmldata);
 		if( pNewPos == 0) return 0;
 

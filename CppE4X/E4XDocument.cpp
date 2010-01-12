@@ -25,7 +25,7 @@ namespace E4X
 	{
 	}
 
-	const char* E4XDocument::parse( const char* xmldata)
+	const char* E4XDocument::parseImp( const char* xmldata)
 	{
 		bool bDeclare = false;
 		bool bElement = false;
@@ -47,9 +47,9 @@ namespace E4X
 					if( bDeclare) return 0;
 					if( bElement) return 0;		// do NOT move this line
 					bDeclare = true;
-					E4XDeclaration* pCell = new E4XDeclaration;
+					E4XCell* pCell = new E4XDeclaration;
 					appendChild( pCell);
-					pNewPos = pCell->parse( pNewPos);
+					pNewPos = pCell->parseImp( pNewPos);
 					if( pNewPos == 0) return 0;
 					continue;
 				}
@@ -57,17 +57,17 @@ namespace E4X
 				{
 					if( pTemp[0] == '!')
 					{
-						E4XComment* pCell = new E4XComment;
+						E4XCell* pCell = new E4XComment;
 						appendChild( pCell);
-						pNewPos = pCell->parse( pNewPos);
+						pNewPos = pCell->parseImp( pNewPos);
 						if( pNewPos == 0) return 0;
 					}
 					else
 					{
 						bElement = true;
-						E4XElement* pCell = new E4XElement;
+						E4XCell* pCell = new E4XElement;
 						appendChild( pCell);
-						pNewPos = pCell->parse( pNewPos);
+						pNewPos = pCell->parseImp( pNewPos);
 						if( pNewPos == 0) return 0;
 						break;
 					}

@@ -257,9 +257,7 @@ namespace E4X
 
 	E4XCell& E4XCell::operator = ( bool bFlag)
 	{
-		m_strValue = bFlag? "true":"false";
-
-		setValue( m_strValue);
+		setValue( bFlag? "true":"false");
 
 		return *this;
 	}
@@ -516,6 +514,12 @@ namespace E4X
 	{
 		removeAllChild();
 		delete this;
+	}
+
+	const char* E4XCell::parse( const char* xmldata)
+	{
+		removeAllChild();
+		return parseImp( xmldata);
 	}
 
 	const char* E4XCell::parseAnsi(const char* xmldata)

@@ -23,7 +23,7 @@ namespace E4X
 	{
 	}
 
-	const char* E4XDeclaration::parse( const char* xmldata)
+	const char* E4XDeclaration::parseImp( const char* xmldata)
 	{
 		m_strName = m_pszDeclarationName;
 		int nBeginSize = m_pszDeclarationBegin.length();
@@ -50,9 +50,9 @@ namespace E4X
 			}
 			else
 			{
-				E4XAttribute* pCell = new E4XAttribute;
+				E4XCell* pCell = new E4XAttribute;
 				appendChild( pCell);
-				pData = pCell->parse( pData);
+				pData = pCell->parseImp( pData);
 			}
 		}
 		return 0;

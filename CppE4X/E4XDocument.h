@@ -40,9 +40,7 @@ namespace E4X
 
 	protected:
 		std::string& toXmlStringInternal( std::string& strXml, int nIndent = 0);
-
-	public:
-		const char* parse( const char* xmldata);
+		virtual const char* parseImp( const char* xmldata);
 	};
 
 }  // namespace

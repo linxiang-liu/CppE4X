@@ -21,9 +21,10 @@ namespace E4X
 
 		virtual E4XDeclaration& copy();
 
-		const char* parse( const char* xmldata);
 
 	protected:
+		virtual const char* parseImp( const char* xmldata);
+
 		/// declaration node name: "#xml"
 		static const std::string m_pszDeclarationName;
 		/// declaration begin text: "<?xml"

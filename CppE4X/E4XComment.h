@@ -28,11 +28,11 @@ namespace E4X
 		/// comment end text: "-->"
 		static const std::string m_pszCommentEnd;
 
-		const char* parse( const char* xmldata);
 		virtual E4XComment& copy();
 
 
 	private:
+		virtual const char* parseImp( const char* xmldata);
 		std::string& toXmlStringInternal( std::string& strXml, int nIndent);
 	};
 

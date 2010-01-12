@@ -20,7 +20,6 @@ namespace E4X
 		E4XElement(const std::string& strName);
 		virtual ~E4XElement(void);
 
-		const char* parse( const char* xmldata);
 
 		virtual void setValue(const std::string& value);
 		virtual const std::string getValue();
@@ -30,6 +29,7 @@ namespace E4X
 
 
 	protected:
+		virtual const char* parseImp( const char* xmldata);
 		std::string& toXmlStringInternal( std::string& strXml, int nIndent);
 	};
 
