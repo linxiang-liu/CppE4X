@@ -31,13 +31,13 @@ namespace E4X
 		m_chSeparator = '\"';
 
 		std::copy( xmldata, pNewPos, std::back_inserter(m_strName));
-		//pNewPos = skipWhiteSpace( pNewPos);
-		//if( pNewPos == 0) return 0;
+		pNewPos = skipWhiteSpace( pNewPos);
+		if( pNewPos == 0) return 0;
 		if( *pNewPos != '=') return 0;
 
-		//pNewPos = skipWhiteSpace( pNewPos + 1);
 		pNewPos++;
-		//if( pNewPos == 0) return 0;
+		pNewPos = skipWhiteSpace( pNewPos);
+		if( pNewPos == 0) return 0;
 		if( *pNewPos!='\"' && *pNewPos!='\'' ) return 0;
 		m_chSeparator = *pNewPos;
 
