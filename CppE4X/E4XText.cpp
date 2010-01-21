@@ -35,7 +35,7 @@ namespace E4X
 			{
 				const char* pEndPos = strstr( xmldata + nBeginSize, m_pszTextEnd.c_str());
 				if( pEndPos == 0) return 0;
-				std::copy( xmldata + nBeginSize, pEndPos, std::back_inserter(m_strValue));
+				m_strValue.assign( xmldata + nBeginSize, pEndPos);
 				m_bNeedEncode = false;
 				return pEndPos + nEndSize;;
 			}
@@ -51,10 +51,7 @@ namespace E4X
 			pNewPos++;
 		}
 
-		//if( *pNewPos == 0) return 0;
-
-		m_strValue.reserve( pNewPos - xmldata);
-		std::copy( xmldata, pNewPos, std::back_inserter(m_strValue));
+		m_strValue.assign( xmldata, pNewPos);
 		bool bGet = getRealStringWithoutException( m_strValue, m_strValue.c_str());
 		if( !bGet) return 0;
 

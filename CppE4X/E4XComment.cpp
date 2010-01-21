@@ -41,8 +41,7 @@ namespace E4X
 		const char* pEndPos = strstr( pStartPos, m_pszCommentEnd.c_str());
 		if( pEndPos == 0) return 0;
 
-		m_strValue.reserve( pEndPos - pStartPos);
-		std::copy( pStartPos, pEndPos, std::back_inserter( m_strValue));
+		m_strValue.assign( pStartPos, pEndPos);
 		bool bGet = getRealStringWithoutException( m_strValue, m_strValue.c_str());
 		if( !bGet) return 0;
 

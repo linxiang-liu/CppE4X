@@ -30,7 +30,8 @@ namespace E4X
 
 		m_chSeparator = '\"';
 
-		std::copy( xmldata, pNewPos, std::back_inserter(m_strName));
+		m_strName.assign( xmldata, pNewPos);
+
 		pNewPos = skipWhiteSpace( pNewPos);
 		if( pNewPos == 0) return 0;
 		if( *pNewPos != '=') return 0;
@@ -52,8 +53,7 @@ namespace E4X
 		if( pNewPos == 0) return 0;
 		if( *pNewPos!=m_chSeparator ) return 0;
 
-		m_strValue.reserve( pNewPos - pValue);
-		std::copy( pValue+1, pNewPos, std::back_inserter(m_strValue));
+		m_strValue.assign( pValue+1, pNewPos);
 		bool bGet = getRealStringWithoutException( m_strValue, m_strValue.c_str());
 		if( !bGet) return 0;
 
