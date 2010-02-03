@@ -1,5 +1,4 @@
 /// 
-/// @brief CppE4X Header File.
 /// @author Linxiang Liu
 /// @version 2.1
 /// @date    2008-2009
