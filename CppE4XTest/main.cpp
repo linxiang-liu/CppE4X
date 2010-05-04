@@ -18,6 +18,16 @@ void test_read_write_file()
 
 		E4XCellRef channel = doc["rss"]["channel"][0].copy();
 		E4XIterator items = doc["rss"]["channel"]["item"];
+
+		E4XCellRef cell = doc["rss"]["channel"]["item"]["subItem"].getCell();
+		E4XIterator subItem(doc["rss"]["channel"]["item"]["subItem"]);
+		subItem["@hello"] =  3;
+
+		std::string str = subItem.toAnsiXmlString();
+		std::cout << str << std::endl;
+
+
+
 		while( items.hasNext())
 		{
 			E4XCellRef cell = items.next();
@@ -56,10 +66,16 @@ void test_parse()
 	E4XElement element;
 	if( element.parse("<invoke name=\"PlayMovie\" returntype=\"xml\"><arguments ><string>here is a string</string></arguments></invoke>"))
 	{
+		element["arguments"].getCell().setValue( "<invoke name=\"PlayMovie\" returntype=\"xml\"><arguments ><string>ÖÐÎÄ²âÊÔ×Ö·û´®</string></arguments></invoke>");
 		std::cout << element["@name"].toString() << std::endl;
 
-		std::cout << element["arguments"].toXmlString() << std::endl;
+		std::cout << element.toAnsiXmlString() << std::endl;
+		E4XDocument doc;
+		doc.parse( element.toXmlString().c_str() );
+		std::cout << doc.toAnsiXmlString() << std::endl;
 		std::cout << element["arguments"]["string"].toString() << std::endl;
+
+		std::cout << element["arguments"].toString() << std::endl;
 
 		E4X::E4XIterator it = element["arguments"][""];
 		while( it.hasNext())
