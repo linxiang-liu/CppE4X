@@ -342,16 +342,44 @@ namespace E4X
 			tmp = pos + 1;
 			pos = end + 1;
 			int len = end - tmp;
+			if( len == 0)
+			{
+				out.push_back('&');
+				out.push_back(';');
+				continue;
+			}
 
 			if( *tmp == '#')
 			{
+				if( len == 1)
+				{
+					out.push_back('&');
+					out.push_back('#');
+					out.push_back(';');
+					continue;
+				}
+
 				++tmp;
 				if( *tmp == 'x')	// hex
 				{
-					if( len <=2  || (len&1)==1)
-						throw(E4XException( E4XException::ERROR_INVALID_TEXT));
-					char data = 0;
+					if( len == 2)
+					{
+						out.push_back('&');
+						out.push_back('#');
+						out.push_back('x');
+						out.push_back(';');
+						continue;
+					}
+
 					int char_count = 0;
+					char data = 0;
+
+					if( (len&1) != 0)
+					{
+						// 奇数个？最前面补0
+						++char_count;		// trick, 通过跳过一个字符来实现补0的效果
+					}
+
 					++tmp;
 					while( tmp != end)
 					{
