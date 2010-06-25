@@ -95,10 +95,6 @@ namespace E4X
 
 		// 赋值
 
-		/// 拷贝赋值
-		/// @param it 源E4XIterartor
-		E4XIterator& operator=( const E4XIterator& it);
-
 		/// 模板赋值函数
 		///	@param t 输入参数
 		template<typename T> E4XIterator& operator = ( T t);
