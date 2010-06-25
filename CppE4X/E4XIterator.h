@@ -17,7 +17,9 @@ namespace E4X
 	{
 	public:
 		///	copy constructor
-		E4XIterator(const E4XIterator& itSrc);
+		/// @param itSrc	源E4XIterator
+		/// @param reset	是否reset迭代器指向的数据
+		E4XIterator(const E4XIterator& itSrc, bool reset = false);
 
 		/// constructor from E4XCell
 		/// @param	cell	构建该Cell的子节点迭代期
@@ -27,6 +29,9 @@ namespace E4X
 
 		/// destructor
 		~E4XIterator(void);
+		
+		///  初始化/重设iterator指向的节点
+		void reset();
 
 		/// 是否还有下一个符合要求的节点。
 		/// @note	该函数并不移动迭代器
@@ -52,7 +57,7 @@ namespace E4X
 		/// @retval	该子节点的迭代期
 		/// @warning	当子节点不存在时，如果正好为当前最大序号加一，将生成该节点。否则，将抛出ERROR_OUT_BOUND异常
 		E4XIterator operator/( const std::string& strName);
-		
+
 		/// 查找下一个节点(并非子节点)。
 		/// @param index	该子节点的序号
 		/// @retval	该子节点的迭代期
@@ -114,10 +119,11 @@ namespace E4X
 	private:
 		/// Default constructor
 		/// @note 不提供
-		E4XIterator();
+		//E4XIterator();
 
-		///	初始化E4XIterator
-		void initInternalIterator();
+		/// 赋值
+		/// @note 不提供
+		E4XIterator& operator=( const E4XIterator& it);
 
 		/// 生成一个子节点
 		/// @retval	子节点的引用
@@ -149,4 +155,3 @@ namespace E4X
 	};
 
 }  // namespace
-

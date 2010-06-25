@@ -20,6 +20,7 @@ void test_read_write_file()
 		E4XIterator items = doc["rss"]["channel"]["item"];
 
 		E4XCellRef cell = doc["rss"]["channel"]["item"]["subItem"].getCell();
+		std::cout << cell.toAnsiXmlString() << std::endl;
 		E4XIterator subItem(doc["rss"]["channel"]["item"]["subItem"]);
 		subItem["@hello"] =  3;
 

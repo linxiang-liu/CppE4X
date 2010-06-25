@@ -296,7 +296,7 @@ namespace E4X
 		{
 			out = getRealString( src);
 		}
-		catch( E4X::E4XException& ex)
+		catch( E4X::E4XException& )
 		{
 			bGet = false;
 		}

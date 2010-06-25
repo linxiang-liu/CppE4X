@@ -11,22 +11,34 @@
 namespace E4X
 {
 
-	E4XIterator::E4XIterator():m_pCell( 0),m_nCount( 0),m_pSubCell(0)
-	{
-		initInternalIterator();
-	}
+	//E4XIterator::E4XIterator():m_pCell( 0),m_nCount( 0),m_pSubCell(0)
+	//{
+	//	initInternalIterator();
+	//}
 
-	E4XIterator::E4XIterator(const E4XIterator &itSrc): m_pCell( itSrc.m_pCell), m_nCount( itSrc.m_nCount), m_strName( itSrc.m_strName),m_pSubCell(0)
+	E4XIterator::E4XIterator(const E4XIterator &itSrc, bool reset)
+		:m_pCell( itSrc.m_pCell),
+		m_nCount( itSrc.m_nCount), 
+		m_strName( itSrc.m_strName),
+		m_pSubCell( itSrc.m_pSubCell)
 	{
-		initInternalIterator();
+		if( reset)
+		{
+			this->reset();
+		}
+		else
+		{
+			m_itCurrent = itSrc.m_itCurrent;
+			m_itNext = itSrc.m_itNext;
+		}
 	}
 
 	E4XIterator::E4XIterator(E4XCell& cell, const std::string& strName): m_pCell( &cell), m_nCount( -1), m_strName( strName),m_pSubCell(0)
 	{
-		initInternalIterator();
+		reset();
 	}
 
-	void E4XIterator::initInternalIterator()
+	void E4XIterator::reset()
 	{
 		if( m_pCell == 0) return;
 
@@ -101,7 +113,7 @@ namespace E4X
 
 	void E4XIterator::remove()
 	{
-		E4XIterator it( *this);
+		E4XIterator it( *this, true);
 		while( it.hasNext())
 		{
 			it.next().removeFromParent();
@@ -126,7 +138,7 @@ namespace E4X
 
 	E4XIterator E4XIterator::operator []( const std::string& strName)
 	{
-		E4XIterator it( *this);
+		E4XIterator it( *this, true);
 		if( it.hasNext())
 		{
 			E4XCell& cell = it.next();
@@ -140,7 +152,7 @@ namespace E4X
 
 	E4XCell& E4XIterator::operator[](int nIndex)
 	{
-		E4XIterator itTemp( *this);
+		E4XIterator itTemp( *this, true);
 
 		int nCurrentIndex = 0;
 
@@ -186,7 +198,8 @@ namespace E4X
 
 	E4XCell& E4XIterator::getCell()
 	{
-		E4XIterator it( *this);
+		E4XIterator it( *this, true);
+
 		if( it.hasNext())
 		{
 			return it.next();
@@ -197,7 +210,8 @@ namespace E4X
 
 	E4XIterator::operator E4XCell&()
 	{
-		E4XIterator it( *this);
+		E4XIterator it( *this, true);
+
 		if( it.hasNext())
 		{
 			return it.next();
@@ -210,8 +224,8 @@ namespace E4X
 	{
 		assert( m_pCell != 0);
 
-		if( m_strName.length() == 0)
-			E4XIterator();
+		//if( m_strName.length() == 0)
+		//	E4XIterator(*this);
 
 		const char* pchName = m_strName.c_str();
 
@@ -232,7 +246,7 @@ namespace E4X
 	{
 		std::string strXml;
 
-		E4XIterator it( *this);
+		E4XIterator it( *this, true);
 
 		while( it.hasNext())
 		{
