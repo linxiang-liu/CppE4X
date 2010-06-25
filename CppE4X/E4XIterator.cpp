@@ -38,6 +38,21 @@ namespace E4X
 		reset();
 	}
 
+	E4XIterator& E4XIterator::operator=( const E4XIterator& it)
+	{
+		if( &it != this)
+		{
+			m_pCell = it.m_pCell;
+			m_nCount = it.m_nCount;
+			m_strName = it.m_nCount;
+			m_pSubCell = it.m_pSubCell;
+			m_itCurrent = it.m_itCurrent;
+			m_itNext = it.m_itNext;			
+		}
+
+		return *this;
+	}
+
 	void E4XIterator::reset()
 	{
 		if( m_pCell == 0) return;

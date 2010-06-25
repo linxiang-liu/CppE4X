@@ -94,6 +94,11 @@ namespace E4X
 		// 删除
 
 		// 赋值
+
+		/// 拷贝赋值
+		/// @param it 源E4XIterartor
+		E4XIterator& operator=( const E4XIterator& it);
+
 		/// 模板赋值函数
 		///	@param t 输入参数
 		template<typename T> E4XIterator& operator = ( T t);
@@ -120,10 +125,6 @@ namespace E4X
 		/// Default constructor
 		/// @note 不提供
 		//E4XIterator();
-
-		/// 赋值
-		/// @note 不提供
-		E4XIterator& operator=( const E4XIterator& it);
 
 		/// 生成一个子节点
 		/// @retval	子节点的引用
