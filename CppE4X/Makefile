@@ -1,11 +1,11 @@
 CC = g++
-libcppe4x.a:*.o
-	ar rcs libcppe4x.a *.o
+libcppe4x.so:*.o
+	${CC} -shared -o libcppe4x.so *.o
 *.o:*.cpp
 	${CC} -c *.cpp
 
-default:libcppe4x.a
+default:libcppe4x.so
 
 clean:
 	rm -rf *.o
-	rm -rf libcppe4x.a
+	rm -rf cppe4x.so
