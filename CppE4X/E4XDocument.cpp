@@ -40,7 +40,7 @@ namespace E4X
 			{
 				//const char* pTemp = skipWhiteSpace( pNewPos + 1);
 				const char* pTemp = pNewPos + 1;
-				if( *pTemp == 0) return false;
+				if( *pTemp == 0) return 0;
 				if( pTemp[0] == '?') // declaration
 				{
 					if( bDeclare) return 0;

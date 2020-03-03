@@ -1,0 +1,6 @@
+*.o
+*.so
+CppE4XTest/cppe4xtest
+*.dll
+*.exe
+
