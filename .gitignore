@@ -4,3 +4,11 @@ CppE4XTest/cppe4xtest
 *.dll
 *.exe
 
+*.db
+*.suo
+CppE4X/Debug/
+CppE4X/x64/
+CppE4XTest/Debug/
+CppE4XTest/x64/
+*.pdb
+*.ilk

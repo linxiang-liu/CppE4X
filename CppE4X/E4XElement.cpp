@@ -182,10 +182,10 @@ namespace E4X
 		{
 			strXml += ">";
 			bool bNeedIndent = false;
-			E4XIterator it( *this, std::string());
-			while( it.hasNext())
+			E4XIterator it2( *this, std::string());
+			while( it2.hasNext())
 			{
-				E4XCell& cell = it.next();
+				E4XCell& cell = it2.next();
 				if( cell.type() != E4X_ATTRIBUTE)
 				{
 					if( cell.type() == E4X_TEXT)
